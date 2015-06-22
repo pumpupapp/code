@@ -1,3 +1,5 @@
+![goto](http://imgs.xkcd.com/comics/goto.png)
+
 # We’re pretty serious about code
 
 At PumpUp, we hold high standards for the quality of code that powers any of our products. Maintaining a healthy codebase is **crucial** for large-scale applications to be able to move fast and iterate often.
