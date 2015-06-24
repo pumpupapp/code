@@ -33,9 +33,21 @@ These conventions force you to critically think about the purpose of something b
 
 ## Conventions in naming functions
 
-...
+...always prefix with a verb... these are some well-defined examples:
 
-always prefix with a verb...
+
+Prefix    | Action    | Parameters | Returns value  | Example   | Alternate prefixes
+:---------|:----------|:-----------|:---------------|:----------|:---------------------
+`create`  | creates something new | yes | yes | `let myCar = createCar('Tesla Model S')`
+`build`   | builds something new on the instance of an object | optional | | `myCar.buildMotor()` | `setup`
+`get`     | gets something | | yes | `user.getFullName()`
+`set`     | sets a child property | yes | | `user.setFollowerCount(10)` | `increment`, `decrement`
+`update`  | updates a parent | optional | | `user.updateProfilePhoto()` | `refresh`
+`save`    | persists something to the DB
+`convert` | changes something from one state to another | optional | the changed thing | `myCar....()`
+`is` | to be or not to be? | | | `has`, `will`, `did`, `can`, `should`
+
+
 
 
 <br />
