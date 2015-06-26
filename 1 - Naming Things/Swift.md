@@ -22,6 +22,7 @@ class Car
 //And to access it
 
 Car car = new Car()
+car.color = "GREEN"
 println(car.color)
 
 ```
