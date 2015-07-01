@@ -1,4 +1,4 @@
-# Naming Things
+# Naming Conventions
 
 As trivial as it may sound, naming things appropriately is one of the most difficult and important parts of writing good code.
 
