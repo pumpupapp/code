@@ -8,7 +8,8 @@ class Car
 {
     String _color = "RED"
     
-    String color{
+    String color
+    {
         set{_color = newValue}
         get{return _color}
     }
