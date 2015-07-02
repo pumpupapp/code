@@ -31,6 +31,7 @@ Commits **must** be:
 			* :memo: writing docs
 			* :bug: fixing a bug
 			* :star: adding a feature
+			* :art: tweaking the design
 			* :sparkles: cleaning up
 			* :white_check_mark: adding tests
 			* :racehorse: improving perf
@@ -44,6 +45,8 @@ Commits **must** be:
 	  * Prevents a CI build from being created
 	  * Useful for any changes that do not require a CI build
 	  	* Eg. a documentation change
+
+**Note: Every significant change should reference at least one Pivotal story.**
 
 ## Examples
 
@@ -69,5 +72,3 @@ Commits **must** be:
 
 // No description
 ```
-		
-**Note: Every significant change should reference at least one Pivotal story.**
