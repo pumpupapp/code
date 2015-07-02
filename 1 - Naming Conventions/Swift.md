@@ -1,8 +1,3 @@
-
-Swift Naming Conventions
-
-<br />
-
 ## Conventions in naming functions 
 (Follow the standard naming things convention excepting under these situations)
 
