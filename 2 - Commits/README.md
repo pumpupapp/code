@@ -16,7 +16,8 @@ Commits **must** be:
 ## Messages
 
 Commit message should answer the question: "What will this commit do?"
-e.g. 'Add filters to workout searching', 'Fix scrolling issue on iOS'
+
+e.g. `Add filters to workout searching`, `Fix scrolling issue on iOS`
 
 * Purpose:
 	* Speed up the code review process.
