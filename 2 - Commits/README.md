@@ -3,7 +3,7 @@
 ## Rules
 
 Commits **must** be:
- 
+
 * Modular
 	* Easy to understand the changes made without having to jump between multiple commits.
 	* Example: Renaming a function and renaming it everywhere that it is used should be a single commit.
@@ -51,6 +51,7 @@ e.g. `Add filters to workout searching`, `Fix scrolling issue on iOS`
 	  	* Eg. a documentation change
 
 **Note: Every significant change should reference at least one Pivotal story.**
+
 
 ## Examples
 
