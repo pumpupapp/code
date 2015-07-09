@@ -1,17 +1,17 @@
-# Pull Requests
+# Pull Requests (PR)
 
-A Pull Request is a request to merge one branch into another.
+A PR is a request to merge one branch into another.
 
 It must contain:
 
-* Subject: Summary of proposed changes
-* Comment: Details of proposed changes
-* Assignee: Person to perform a Code Review
+* **Subject:** Summary of proposed changes
+* **Comment:** Details of proposed changes
+* **Assignee:** Person to perform a Code Review
 
 
-### When to create Pull Requests
+#### When to PR
 
-A Pull Request **must** be opened when merging the following types of branches:
+A PR **must** be opened when merging the following types of branches:
 
 * feature branch ~> project branch
 * project branch ~> `develop` **ONLY WHEN YOU HAVE COMPLETED INTERNAL QA**
@@ -20,17 +20,17 @@ A Pull Request **must** be opened when merging the following types of branches:
 * hotfix branch ~> `master`
 
 
-### When **not** to create Pull Requests
+#### When **not** to PR
 
-A Pull Request should **not** be opened when merging the following types of branches:
+A PR **must not** be opened when merging the following types of branches:
 
 * `master` ~> `develop`
 * release branch ~> `master`
 
 
-## Pulling from one stream to another
+## Rebase
 
-When pulling changes from one stream to another, there are two ways to do so: a regular merge or a “rebase” merge.
+When pulling changes from one stream to another (eg. `develop` ~> `master`), there are two ways to do so: a regular merge or a “rebase” merge.
 
 Typically, you should always do a rebase merge.
 
@@ -38,3 +38,8 @@ The only exceptions are:
 
 * project branch ~> `develop`
 * release branch ~> `master`
+
+
+## Culture
+
+After opening a PR, it is customary to gently shoot the assigned *Reviewer* with a Nerf™ gun. Please avoid eye and genital contact.
