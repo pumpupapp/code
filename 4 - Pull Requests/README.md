@@ -14,7 +14,7 @@ It must contain:
 A Pull Request **must** be opened when merging the following types of branches:
 
 * feature branch ~> project branch
-* project branch ~> `develop`
+* project branch ~> `develop` **ONLY WHEN YOU HAVE COMPLETED INTERNAL QA**
 * project bugfix branch ~> project
 * release bugfix branch ~> release
 * hotfix branch ~> `master`
