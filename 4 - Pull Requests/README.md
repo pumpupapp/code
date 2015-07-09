@@ -42,4 +42,4 @@ The only exceptions are:
 
 ## Culture
 
-After opening a PR, it is customary to gently shoot the assigned *Reviewer* with a Nerf™ gun. Please avoid eye and genital contact.
+After opening a PR, it is customary to gently shoot the assigned *Reviewer* with a Nerf™ gun. **Please avoid eye and genital contact.**
