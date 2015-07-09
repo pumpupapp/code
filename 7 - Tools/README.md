@@ -33,6 +33,8 @@ Once you’ve set up Package Control, you may start installing plugins by hittin
 - **Sublime Alignment**: align your variable/property declarations so your code is more readable
 - **SyncedSideBar**: highlights the active file
 
+To install all of these plugins (and some more), use th *Sublime Packages.zip* file and merge it with `Sublime Text.app -> Show Package Contents -> Contents -> MacOS -> Packages`.
+
 You can also spill some paint onto Sublime’s default theme. Some recommendations are:
 
 - **Predawn** \*
@@ -108,3 +110,14 @@ ClipMenu is a utility app that keeps a history of your clipboard. Verrrry useful
 ### [Better Touch Tool](http://bettertouchtool.en.softonic.com/mac)
 
 Better Touch Tool is a utility app that let’s you add keyboard shortcuts to a lot of basic MacOS actions, like window sizing/moving. [Here’s a quick tutorial](http://mac.appstorm.net/reviews/productivity-review/controlling-your-mac-with-bettertouchtool/) to get you familiarized.
+
+
+
+
+
+## Database
+
+
+### [Navicat](http://www.navicat.com/download)
+
+SQL GUI.
