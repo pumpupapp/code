@@ -10,7 +10,7 @@ A CR is a review of the proposed changes in a PR.
 
 1. A CR **must** be done before a PR can be merged.
 * A CR **must not** be done by any authors of the PR.
-* A CR **must not** be merged until all CI builds pass.
+* A PR **must not** be merged until all CI builds pass.
 
 
 ## Steps
