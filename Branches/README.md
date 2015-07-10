@@ -4,8 +4,8 @@ We follow a variation of the traditional Git Flow branching model.
 
 Type | Purpose | Pull ~> Push | Naming pattern | Example
 :----|:--------|:-------------|:---------------|:-------
-Master | Latest stable code in production |  | `master`
-Develop | Latest stable code in development | `master` & Release branch | `develop`
+`master` | Latest stable code in production |  | `master`
+`develop` | Latest stable code in development | `master` & Release branch | `develop`
 *Release | Snapshot of `develop` | `develop` ~> `master` | `release/RELEASE_NAME` | `release/v3.3.0`
 Project | Receives pull requests from feature & bugfix branches | `develop` ~> `develop` | `feature/PROJECT_NAME` | `feature/custom-workout`
 Feature | Implements new feature | Project branch ~> Project branch | `feature/PROJECT_NAME.FEATURE_NAME` | `feature/custom-workout.search-filters`
