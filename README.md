@@ -3,7 +3,7 @@
 1. [Introduction](#Introduction)
 * [Standup](Standup)
 * [Naming Conventions](Naming Conventions)
-* [Style Guide](Style Guide)
+* [Style Guides](Style Guides)
 * [Pivotal Stories](Pivotal Stories)
 * [Branches](Branches)
 * [Commits](Commits)
