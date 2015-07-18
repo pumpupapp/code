@@ -4,7 +4,7 @@
 * [Standup](Standup)
 * [Naming Conventions](Naming Conventions)
 * [Style Guides](Style Guides)
-* [[Pivotal Tracker]]
+* [Pivotal Tracker](Pivotal Tracker)
 * [Branches](Branches)
 * [Commits](Commits)
 * [Pull Requests](Pull Requests)
