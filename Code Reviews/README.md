@@ -30,7 +30,7 @@ A CR is a review of the proposed changes in a PR.
 The quality of a CR depends on the **Reviewer**. An ideal **Reviewer** pays close attention to the following:
 
 * Style
-  - Does is look and read beautifully?
+  - Does it read beautifully?
 * Functionality
   - Does it work?
 * Logic
