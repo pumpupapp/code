@@ -7,8 +7,8 @@ Every day, each developer must post in the **#dev_standups** channel with the fo
   * Mark the day as **P**ass or **F**ail
     * Every time you accomplish all your goals from the day before, you earn a **P**
     * **P**s are compounded until you cash them in:
-      * **30P = 1 Karma Star**
-    * Once you hit 30P, they are automatically cashed in
+      * **20P = 1 Karma Star**
+    * Once you hit 20P, they are automatically cashed in
     * When you don’t accomplish all your goals from the day before, you receive an **F**
       * This resets your **P** to 0
   * Example 1:
