@@ -27,7 +27,7 @@ A CR is a review of the proposed changes in a PR.
 
 ## Reviewer Guide
 
-The quality of a CR depends on the *Reviewer*. An ideal *Reviewer* pays close attention to the following:
+The quality of a CR depends on the **Reviewer**. An ideal **Reviewer** pays close attention to the following:
 
 * Style
   - Does is look and read beautifully?
