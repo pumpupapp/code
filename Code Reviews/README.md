@@ -15,8 +15,10 @@ A CR is a review of the proposed changes in a PR.
 
 ## Steps
 
-1. *Reviewer* goes through every change, making any necessary comments.
-* If there are any comments, *Developer* responds to each comment with either a follow-up comment or a code change, and notifies *Reviewer* once another review is ready. Go back to step (1).
+1. *Developer* assigns *Reviewer* to PR.
+* *Reviewer* goes through every change, making any necessary comments.
+* *Reviewer* assigns *Developer* to PR.
+* If there are any comments, *Developer* responds to each comment with either a follow-up comment or a code change. Once another review is ready, go back to (1).
 * *Reviewer* may request a demo of the proposed changes. If any bugs are found, *Developer* must fix fix them and demo again.
 * *Reviewer* merges the PR and deletes the branch.
 
