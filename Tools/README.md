@@ -18,7 +18,7 @@ Before moving on, you must install [Package Control](https://sublime.wbond.net/i
 
 Once you’ve set up Package Control, you may start installing plugins by hitting `Cmd + Shift + P` to open up the command dialog, and then begin typing “install” until you see “Package Control: Install Package”. Then hit `Return` to find and install the following plugins:
 
-- **BufferScroll**: remembers your open files, scroll position, saved state, and more
+- **BufferScroll**: remembers your open files, scroll position, saved state, and more __*__
 - **Case Conversion**: allows you to convert letter-casing of the selected text
 - **[DocBlockr](https://github.com/spadgos/sublime-jsdocs)**: simplified and clean commenting
 - **EditorConfig**: enables teams to share editor settings such as whitespace, etc
@@ -37,11 +37,14 @@ To install all of these plugins (and some more), use th *Sublime Packages.zip* f
 
 You can also spill some paint onto Sublime’s default theme. Some recommendations are:
 
-- **Predawn** \*
+- **Predawn** **
 - **Spacegray**
 - **Material Theme**
 
-_\* If you choose to go with Predawn, make sure to copy the `sidebar_medium` and `tabs_medium` options as mentioned below._
+
+_\* BufferScroll has a really annoying "feature" where multiple views of the same file have their scroll positions synced. To change this behavior, go to `Sublime Text > Preferences > Package Settings > BufferScroll > Settings - User` and add `"synch_scroll": false`._
+
+_\** If you choose to go with Predawn, make sure to copy the `sidebar_medium` and `tabs_medium` options as mentioned below._
 
 To customize Sublime’s behaviors to our specific practices, we use the following configuration (hit `Cmd + ,` to open your preferences):
 
