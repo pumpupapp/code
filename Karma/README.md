@@ -1,21 +1,32 @@
 # Karma
 
-We believe in karma. The more karma you have, the better.
+We believe in karma. So much so that you can redeem karma for *real things*.
 
-You can redeem karma points for real things.
 
+<br />
 ## Karma Points
 
+### Rules
+
 Karma points are awarded for a successful [Standup](../Standup/README.md).
+
+### Value
 
 *20 Karma Points* = *1 Karma Star*
 
 
+
+<br />
 ## Karma Stars
 
-Upon being rewarded a Karma Star, it must be added to the Karma Board in the office.
+### Rules
 
-Karma Stars can never be awarded to yourself. Whoever awards a Karma Star is encouraged to differentiate their star's design from all others so that the stars they award are visibly awarded by them.
+1. Karma Stars can never be awarded to yourself.
+* Upon being rewarded a Karma Star, it must be added to the Karma Board in the office, as well as shared in the #karma Slack channel.
+  * Eg. `I would like to award my Karma Star to @amsul for overloading his computer with porn.`
+* Whoever awards a Karma Star must to differentiate their star's design from all others.
+
+### Value
 
 *1 Karma Star* = $10 towards an office purchase (send filled purchase form to Office Admin)
 *10 Karma Stars* = A team outing of your choice (within reason)
