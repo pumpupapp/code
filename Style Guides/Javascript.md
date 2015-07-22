@@ -14,8 +14,6 @@ A minimalist's guide to modern JavaScript.
   - [Alignment](#alignment)
 - [Semicolons](#semicolons)
 - [Comments](#comments)
-  - [Inline](#inline)
-  - [Block](#block)
 - [Naming conventions](#naming conventions)
 - [Variables](#variables)
 - [Functions](#functions)
@@ -164,11 +162,61 @@ function mapArgs(args, fn) {
 
 ## Comments
 
-Comments are necessary to describe to humans what code a snippet of code is doing - however, they must be as concise as possible to make them easier to maintain as the snippet evolves.
+Comments are necessary to describe to humans what a snippet of code is doing - however, they must be as concise as possible to make them easier to maintain as the snippet evolves.
+
+
+### Things to do
+
+1. Keep the present tense
+  * Eg. `Will increment the follower count => Increments the follower count`
+* Be concise
+  * Eg.
+  ```
+  This function takes a variable called A and adds it to a variable called B and then returns the result. This is also called a sum. If you want to read more about sums, go back to elementary school.
+  =>
+  Sums A and B.
+  ```
+* Be explicit
+  * Eg.
+  ```
+  Toggles button.
+  =>
+  Toggles the visibility of the "Start Workout" button.
+  ```
+* Split long lines
+* Use proper spelling, punctuation, and grammar
+* Group shorthand functions with the main function and only provide a single block comment
+  * Eg. When defining `toggleButton(toggle)`, `showButton()`, and `hideButton()`, only provide a block comment for `toggleButton(toggle)` and put the shorthand functions immediately below it.
+
+
+### Things to NOT do
+
+1. Use pronouns (eg. we, I, you, etc.)
+  - `We need this to access module X => Used to access module X`
+  - `If you don't have access to X, don't call this => Requires access to X`
+* Be vague
+  * Eg. `This function processes data.`
+* Use unnecessary punctuation
+  * Eg. `Workout created!!!1`
+
+
+
+### Types
+
 
 #### Inline
 
-Inline comments should always appear *before* the line they are describing:
+Inline comments should only be inside of function bodies.
+
+##### When to use
+
+* Non-trivial snippets (eg. bit shifting, formulas)
+* Unintuitive logic (eg. workarounds)
+* Line-specific annotations (eg. `// TODO: change to validate once issue at http://example.com is fixed`)
+
+
+
+They should always appear *before* the line they are describing:
 
 ###### Bad
 
@@ -188,12 +236,13 @@ x = x + 1
 
 Use [DocBlockr](https://github.com/Warin/Sublime/tree/master/DocBlockr).
 
-Here is a complete mock comment to exemplify all of the possible inclusions:
+Here is a complete mock comment to exemplify all of the possible inclusions, as well as their ordering and spacing:
 
 ```javascript
 /**
  * @deprecated because yolo
- * This is my description
+ *
+ * This is my description.
  *
  * TODO: make all your comments this awesome
  * FIXME: just kidding, my code is gold
@@ -204,8 +253,10 @@ Here is a complete mock comment to exemplify all of the possible inclusions:
  *     prop2: '2'
  *   })
  *   // 12345
+ *
  * @example
  *   callThisFunctionWithArgs("oneLiner", 1) // 12345
+ *
  * @example
  *   callThisFunctionWithArgs("tooLongForOneLine", 12345, {
  *     too:   'many',
@@ -214,23 +265,53 @@ Here is a complete mock comment to exemplify all of the possible inclusions:
  *   }
  *   =>
  *   {
- *     it:       "won't",
- *     actually: 'return',
- *     "this":   'because',
- *     i:        'said',
- *     so:       '.'
+ *     it       : 'won\'t',
+ *     actually : 'return',
+ *     "this"   : 'because',
+ *     i        : 'said',
+ *     so       : '.'
  *   }
  *
- * @param {String} arg1 the first argument
- * @param {Number} arg2 the second argument
- * @param {Object} obj  the object @optional
+ * @param {String} arg1  This is the first argument.
+ * @param {Number} arg2  A number of your choice (don't pick 7).
+ * @param {Object} arg3  An object.
+ *        {Object} arg3.prop1 The object's property.
+ *        {Object} [arg3.prop2] The object's optional property.
+ * @param {Object} [obj] An optional object.
  *
- * @return {Number} always returns 12345 because yolo
+ * @return {Number} Always returns 12345 because yolo.
  *
  * @private
  * @admin
  */
 ```
+
+
+#### Section
+
+Sectional comments are used to organize code in modules into logical sections.
+
+```javascript
+///////////////////////
+// BEST SECTION EVER //
+///////////////////////
+```
+
+
+
+#### Module
+
+Module comments are used to describe the contents of a module in a simple way.
+
+```javascript
+/**
+ * This is the JavaScript Style Guide. You should read this
+ * while drinking coffee. In here, you can find out exactly
+ * what this file contains in a concise tidbit of text.
+ */
+```
+
+
 
 
 ## Naming conventions
