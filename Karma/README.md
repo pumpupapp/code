@@ -23,7 +23,7 @@ Karma points are awarded for a successful [Standup](../Standup/README.md).
 
 1. Karma Stars can never be awarded to yourself.
 * Upon being rewarded a Karma Star, it must be added to the Karma Board in the office, as well as shared in the #karma Slack channel.
-  * Eg. `I would like to award my Karma Star to @amsul for overloading his computer with porn.`
+  * Eg. `I would like to award my Karma Star to @amsul for being extremely helpful.`
 * Whoever awards a Karma Star must to differentiate their star's design from all others.
 
 ### Value
