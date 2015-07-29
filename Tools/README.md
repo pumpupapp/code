@@ -72,6 +72,7 @@ To customize Sublime’s behaviors to our specific practices, we use the followi
     "scroll_past_end": true,
     "sidebar_medium": true,
     "tabs_medium": true,
+    "tabSize": 2,
     "theme": "predawn.sublime-theme",
     "translate_tabs_to_spaces": true,
     "trim_trailing_white_space_on_save": true,
