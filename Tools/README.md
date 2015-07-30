@@ -28,9 +28,14 @@ Once you’ve set up Package Control, you may start installing plugins by hittin
 - **HTML-CSS-JS Prettify**: prettify HTML, CSS, and JSON
 - **Pretty JSON** (if HTMLPrettify doesn't work): prettify JSON
 - **Inc-Dec-Value**: increase and decrease values such as pixels, %, hex, etc using the keyboard
+- **JSX**: enables syntax highlighting for JSX
 - **Sass**: enables syntax highlighting for Sass
 - **SCSS**: enables syntax highlighting for Sass in the SCSS flavor
 - **SideBarEnhancements**: adds a whole bunch of useful sidebar/file utilities
+- **SublimeLinter**: sets up the language syntax linter
+- **SublimeLinter-jshint**: lints JavaScript files
+- **SublimeLinter-jsxhint**: lints JSX files
+- **SublimeLinter-csslint**: lints CSS files
 - **SyncedSideBar**: highlights the active file
 
 To install all of these plugins (and some more), use th *Sublime Packages.zip* file and merge it with `Sublime Text.app -> Show Package Contents -> Contents -> MacOS -> Packages`.
