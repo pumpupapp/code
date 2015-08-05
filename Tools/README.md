@@ -18,33 +18,45 @@ Before moving on, you must install [Package Control](https://sublime.wbond.net/i
 
 Once you’ve set up Package Control, you may start installing plugins by hitting `Cmd + Shift + P` to open up the command dialog, and then begin typing “install” until you see “Package Control: Install Package”. Then hit `Return` to find and install the following plugins:
 
-- **BufferScroll**: remembers your open files, scroll position, saved state, and more __*__
+- **Alignment**: align your variable/property declarations so your code is more readable __*__
+- **BufferScroll**: remembers your open files, scroll position, saved state, and more __**__
 - **Case Conversion**: allows you to convert letter-casing of the selected text
 - **[DocBlockr](https://github.com/spadgos/sublime-jsdocs)**: simplified and clean commenting
 - **EditorConfig**: enables teams to share editor settings such as whitespace, etc
 - **Emmet**: simplifies writing HTML using CSS selectors
 - **GitGutter**: shows "modified" lines in the sidebar
-- **HTMLPrettify**: prettify HTML, CSS, and JSON
+- **HTML-CSS-JS Prettify**: prettify HTML, CSS, and JSON
 - **Pretty JSON** (if HTMLPrettify doesn't work): prettify JSON
 - **Inc-Dec-Value**: increase and decrease values such as pixels, %, hex, etc using the keyboard
+- **JSX**: enables syntax highlighting for JSX
 - **Sass**: enables syntax highlighting for Sass
 - **SCSS**: enables syntax highlighting for Sass in the SCSS flavor
 - **SideBarEnhancements**: adds a whole bunch of useful sidebar/file utilities
-- **Sublime Alignment**: align your variable/property declarations so your code is more readable
+- **SublimeLinter**: sets up the language syntax linter
+- **SublimeLinter-jshint**: lints JavaScript files
+- **SublimeLinter-jsxhint**: lints JSX files
+- **SublimeLinter-csslint**: lints CSS files
 - **SyncedSideBar**: highlights the active file
 
 To install all of these plugins (and some more), use th *Sublime Packages.zip* file and merge it with `Sublime Text.app -> Show Package Contents -> Contents -> MacOS -> Packages`.
 
 You can also spill some paint onto Sublime’s default theme. Some recommendations are:
 
-- **Predawn** **
+- **Predawn** ***
 - **Spacegray**
 - **Material Theme**
 
+_\* By default, the alignment is applied only to the `=` character. However, we also align the `:` character. To enable that, go to `Sublime Text > Preferences > Package Settings > Alignment > Settings - User` and add:_
+```json
+{
+    "alignment_chars": ["=", ":"],
+    "alignment_space_chars": ["=", ":"]
+}
+```     
 
-_\* BufferScroll has a really annoying "feature" where multiple views of the same file have their scroll positions synced. To change this behavior, go to `Sublime Text > Preferences > Package Settings > BufferScroll > Settings - User` and add `"synch_scroll": false`._
+_\** BufferScroll has a really annoying "feature" where multiple views of the same file have their scroll positions synced. To change this behavior, go to `Sublime Text > Preferences > Package Settings > BufferScroll > Settings - User` and add `"synch_scroll": false`._
 
-_\** If you choose to go with Predawn, make sure to copy the `sidebar_medium` and `tabs_medium` options as mentioned below._
+_\*** If you choose to go with Predawn, make sure to copy the `sidebar_medium` and `tabs_medium` options as mentioned below._
 
 To customize Sublime’s behaviors to our specific practices, we use the following configuration (hit `Cmd + ,` to open your preferences):
 
@@ -72,6 +84,7 @@ To customize Sublime’s behaviors to our specific practices, we use the followi
     "scroll_past_end": true,
     "sidebar_medium": true,
     "tabs_medium": true,
+    "tabSize": 2,
     "theme": "predawn.sublime-theme",
     "translate_tabs_to_spaces": true,
     "trim_trailing_white_space_on_save": true,
