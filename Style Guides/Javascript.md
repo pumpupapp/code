@@ -604,6 +604,9 @@ function myLogFn() {
 ```
 
 
+**Note:** All of these rules are recursive, meaning if there is a function within a function, the same rules apply to that function.
+
+
 
 
 ## Objects
