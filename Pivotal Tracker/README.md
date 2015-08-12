@@ -13,6 +13,17 @@ The tracking tools provided are:
 
 An epic contains all stories that relate to a specific project.
 
+### Guidelines
+
+* Be as specific as possible
+  * Eg. If you found a bug with creating a workout, use the **custom workouts** epic instead of the **mobile** epic
+* If there is no relevant epic or you are unsure, use the **support** epic
+* Add multiple epics, if possible
+  * Eg. The following can be tagged with **mobile** and **custom workouts**:
+
+    > Others' workout titles are editable when you click them from the feed
+
+
 
 
 ## Stories
@@ -82,12 +93,14 @@ Specific details of the story.
 
 Quick tags to allow categorization and searching of stories.
 
-* Epic: **this is required**
-* OS
-* Device
-* Commit hash (if a bug) (TBD)
+* *Epic
+* OS eg. **ios**
+* Device eg. **iphone 6+**
+* Version or date the build was taken from (eventually commit hash)
+* **regression** if it's something that used to work
+* **low priority** if it's something that isn't critical
 
-
+*Required
 
 
 ### Tasks
