@@ -177,6 +177,49 @@ private enum CompassDirection { EAST, NORTH, WEST, SOUTH }
 Spacing is especially important as code needs to be
 easily readable as part of the tutorial. Java does not lend itself well to this.
 
+### Method Spacing
+
+Put 1 return line between methods
+
+__BAD__
+```java
+    /**
+    *Description
+    */
+    public void updateEditImage(int editImagePosition, Uri uri)
+    {
+        System.out.println("Setting image at " + editImagePosition + " to this file path " + uri.getPath());
+        _editPhotoFragment.addImageFromLibrary(uri);
+    }
+    /**
+     * Adds the select photo fragment to the screen
+     */
+    public void openSelectPhoto()
+    {
+      //...
+    }
+```
+
+__GOOD__
+```java
+    /**
+    *Description
+    */
+    public void updateEditImage(int editImagePosition, Uri uri)
+    {
+        System.out.println("Setting image at " + editImagePosition + " to this file path " + uri.getPath());
+        _editPhotoFragment.addImageFromLibrary(uri);
+    }
+    
+    /**
+     * Adds the select photo fragment to the screen
+     */
+    public void openSelectPhoto()
+    {
+      //...
+    }
+```
+
 ### Indentation
 
 Indentation is using spaces - never tabs.
