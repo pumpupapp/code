@@ -151,10 +151,10 @@ If you need to expose a Swift type for use within Objective-C you can provide a 
 
 **Preferred:**
 ```swift
-if user.isHappy
+if(user.isHappy)
 {
   //Do something
-} else
+}else
 {
   //Do something else
 }
@@ -162,11 +162,11 @@ if user.isHappy
 
 **Not Preferred:**
 ```swift
-if user.isHappy
+if(user.isHappy)
 {
     //Do something
 }
-else {
+else{
     //Do something else
 }
 ```
