@@ -231,7 +231,98 @@ Lines should be no longer than 100 characters long.
 There should be exactly one blank line between methods to aid in visual clarity 
 and organization. Whitespace within methods should separate functionality, but 
 having too many sections in a method often means you should refactor into
-several methods.
+several methods. 
+
+
+### Implementation Spacing
+
+If the lines are related to the same task, don't space. If there is a significant difference in the purpose of two lines, add a return. Use your best judgement here. Here is an example
+
+```java
+    @Override
+    protected void onCreate(Bundle savedInstanceState)
+    {
+        super.onCreate(savedInstanceState);
+
+        //This is required for twitter4j otherwise there is a thread network error
+        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+        StrictMode.setThreadPolicy(policy);
+
+        _root = new RelativeLayout(this);
+        _root.setPadding(0, 0, 0, 0);
+        _root.setBackgroundColor(Color.BLACK);
+        
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.JELLY_BEAN_MR1) 
+        {
+          _root.setId(IDGenerator.generateViewId());
+        } else 
+        {
+            _root.setId(View.generateViewId());
+        }
+        
+        setContentView(_root);
+
+        FragmentManager fragmentManager = getFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        _editPhotoFragment = F_EditPhoto.newInstance();
+        _selectPhotoFragment = new F_SelectPhoto();
+        fragmentTransaction.add(_root.getId(), _editPhotoFragment);
+        fragmentTransaction.commit();
+
+        //Create buttons for select photo and callback
+        int buttonDimension =(int) (0.1* ViewHelper.screenWidthPX(this));
+        int offset = (int)(0.02* ViewHelper.screenWidthPX(this));
+
+        _cancelSelectPhotoButton = new ImageButton(this);
+        _cancelSelectPhotoButton.setAdjustViewBounds(true);
+        _cancelSelectPhotoButton.setBackgroundColor(Color.TRANSPARENT);
+        _cancelSelectPhotoButton.setImageResource(R.drawable.deselecticon);
+        _cancelSelectPhotoButton.setPadding(0, 0, 0, 0);//Without this the image spits outside the box, SO WEIRD
+        _cancelSelectPhotoButton.setScaleType(ImageView.ScaleType.FIT_XY);
+        _cancelSelectPhotoButton.setMinimumHeight(buttonDimension);
+        _cancelSelectPhotoButton.setMaxHeight(buttonDimension);
+        _cancelSelectPhotoButton.setMinimumWidth(buttonDimension);
+        _cancelSelectPhotoButton.setMaxWidth(buttonDimension);
+        _cancelSelectPhotoButton.setOnClickListener(
+                new View.OnClickListener() 
+                {
+                    @Override
+                    public void onClick(View v) 
+                    {
+                        removeAllSelectionsAndClose();
+                    }
+                }
+        );
+        _cancelSelectPhotoButton.setX(offset);
+        _cancelSelectPhotoButton.setY(ViewHelper.screenHeightPX(this) - buttonDimension - offset);
+
+
+        _confirmSelectPhotoButton = new ImageButton(this);
+        _confirmSelectPhotoButton.setAdjustViewBounds(true);
+        _confirmSelectPhotoButton.setImageResource(R.drawable.selectimageicon);
+        _confirmSelectPhotoButton.setBackgroundColor(Color.TRANSPARENT);
+        _confirmSelectPhotoButton.setMinimumHeight(buttonDimension);
+        _confirmSelectPhotoButton.setMaxHeight(buttonDimension);
+        _confirmSelectPhotoButton.setMinimumWidth(buttonDimension);
+        _confirmSelectPhotoButton.setMaxWidth(buttonDimension);
+        _confirmSelectPhotoButton.setOnClickListener(
+                new View.OnClickListener() 
+                {
+                    @Override
+                    public void onClick(View v) 
+                    {
+                        beginCloseSelectPhoto();
+                    }
+                }
+        );
+        _confirmSelectPhotoButton.setPadding(0, 0, 0, 0);
+        _confirmSelectPhotoButton.setScaleType(ImageView.ScaleType.FIT_XY);
+        _confirmSelectPhotoButton.setX(ViewHelper.screenWidthPX(this) - buttonDimension - offset);
+        _confirmSelectPhotoButton.setY(ViewHelper.screenHeightPX(this) - buttonDimension - offset);
+
+        _photoSelectIsOpen = false;
+    }
+```java
 
 ## Getters & Setters
 
@@ -277,6 +368,21 @@ class MyClass {
     }
   }
 }
+```
+
+For complicated function params (like callbacks) the closing brace should be inline with the start of the method name:
+
+```java
+_cancelSelectPhotoButton.setOnClickListener(
+    new View.OnClickListener() 
+    {
+       @Override
+       public void onClick(View v) 
+       {
+          removeAllSelectionsAndClose();
+       }
+    }
+);
 ```
 
 Conditional statements are always required to be enclosed with braces,
