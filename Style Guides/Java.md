@@ -365,7 +365,7 @@ If the lines are related to the same task, don't space. If there is a significan
 
         _photoSelectIsOpen = false;
     }
-```java
+```
 
 ## Getters & Setters
 
