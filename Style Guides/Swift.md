@@ -29,12 +29,12 @@ Writing Objective-C? Check out our [Objective-C Style Guide](https://github.com/
 
 ## Naming
 
-Use descriptive names with camel case for classes, methods, variables, etc. Class names and constants in module scope should be capitalized, while method names and variables should start with a lower case letter. Private variables should start with an _.
+Use descriptive names with camel case for classes, methods, variables, etc. Class names and constants in module scope should be all capitalized with underscores, while method names and variables should start with a lower case letter. Private variables should start with an _.
 
 **Preferred:**
 
 ```swift
-let MaximumWidgetCount = 100
+let MAX_WIDGET_COUNT = 100
 var _variable = 99
 
 class WidgetContainer
@@ -47,7 +47,7 @@ class WidgetContainer
 **Not Preferred:**
 
 ```swift
-let MAX_WIDGET_COUNT = 100
+let MaximumWidgetCount = 100
 
 class app_widgetContainer
 {
@@ -151,10 +151,10 @@ If you need to expose a Swift type for use within Objective-C you can provide a 
 
 **Preferred:**
 ```swift
-if user.isHappy
+if(user.isHappy)
 {
   //Do something
-} else
+}else
 {
   //Do something else
 }
@@ -162,11 +162,11 @@ if user.isHappy
 
 **Not Preferred:**
 ```swift
-if user.isHappy
+if(user.isHappy)
 {
     //Do something
 }
-else {
+else{
     //Do something else
 }
 ```
