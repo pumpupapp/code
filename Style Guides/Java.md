@@ -233,9 +233,9 @@ Indentation is using spaces - never tabs.
 
 #### Blocks
 
-Indentation for blocks uses 2 spaces (not the default 4):
+Indentation for blocks uses 4 spaces:
 
-__BAD:__
+__GOOD:__
 
 ```java
 for (int i = 0; i < 10; i++) 
@@ -244,7 +244,7 @@ for (int i = 0; i < 10; i++)
 }
 ```
 
-__GOOD:__
+__BAD:__
 
 ```java
 for (int i = 0; i < 10; i++) 
