@@ -563,7 +563,7 @@ function calculate(options) {
 
 ###### Whitespace
 
-Whitespace around a function should look like this:
+Whitespace **around a function** should look like this:
 
 ```javascript
 function getSomeValue(object, propertyName) {
@@ -572,7 +572,7 @@ function getSomeValue(object, propertyName) {
 var value = getSomeValue(someObject, 'property')
 ```
 
-Whitespace around a generator should look like this:
+Whitespace **around a generator** should look like this:
 
 ```javascript
 // Anonymous
@@ -581,6 +581,29 @@ app.use(function* () {})
 // Named
 function* myGenerator() {}
 ```
+
+Whitespace **within a function** should look like this:
+
+```javascript
+// For functions of 3 lines or less
+function myShortFn() {
+  var x = 1
+  return x + 1
+}
+
+// For functions longer than 3 lines
+function myLogFn() {
+
+  var x = 1
+  var y = 2
+  var z = 3
+
+  return x * y + z
+
+}
+```
+
+
 
 
 ## Objects
