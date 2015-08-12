@@ -111,6 +111,11 @@ Written in __lowerCamelCase__.
 
 Single character values to be avoided except for temporary looping variables.
 
+### Logging
+
+Use `System.out.println` instead of `Log.d()` or `Log.v()`
+
+
 ### Misc
 
 In code, acronyms should be treated as words. For example:
@@ -129,6 +134,8 @@ XmlHttpRequest
 String url
 findPostById
 ```
+
+
 
 ## Declarations
 
