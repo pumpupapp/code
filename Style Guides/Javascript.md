@@ -313,6 +313,44 @@ Module comments are used to describe the contents of a module in a simple way.
 
 
 
+## Logs
+
+To aid in debugging, we add logs to our code.
+
+
+### Guidelines
+
+1. Be concise
+* Avoid punctuation
+* Sentence casing in *browser* and lowercase in *Node*
+* Provide context
+* Include variable values
+
+
+### Types
+
+Be sure to use the right type of log for your scenario:
+* `console.log` : When a user does something
+* `console.info` : When something happens without a user doing it
+* `console.assert` : When an assertion needs to be made
+* `console.warn` : When something has gone wrong
+* `console.error` : When something has gone critically wrong
+
+**Do not** use these types of logs:
+* `console.debug`
+
+
+### Examples
+
+```javascript
+console.log('Saving workout %o', workout)
+console.info('Workout saved %o', workout)
+console.assert(!!workout, 'Workout does not exist')
+console.warn('Workout.saveChildren is deprecated')
+console.error('Tried saving workout that isn’t owned %o', workout)
+```
+
+
 
 ## Naming conventions
 
@@ -403,15 +441,24 @@ var named = function named() {}
 
 // Function declaration
 function declaration() {}
+
+// Contextual function
+var contextual = () => {}
 ```
 
-Only use function declarations for the sake of consistency and added benefits they come with.
+**Only use function declarations** for the sake of consistency and added benefits they come with.
 
 ```javascript
 // Bad
 module.exports = {
   myMethod: function() {}
 }
+
+// Bad
+var myFunc = function myMethod() {}
+
+// Bad
+var myMethod = () => {}
 
 // Good
 module.exports = {
@@ -420,9 +467,62 @@ module.exports = {
 function myMethod() {}
 ```
 
-###### Private methods
+The only exception is when defining a private function within another function, you can use a **contextual function**.
 
-All private methods should be defined *after* the `return` statement so that the main function body is easier to digest:
+```javascript
+function myMethod(user) {
+
+  var success = () => {
+    console.log('Success')
+  }
+
+  user.save({ success })
+
+}
+```
+
+
+##### Parameters
+
+If there are more than 3 parameters, it is customary to use an object which contains properties that would otherwise be their own parameters.
+
+If there are too many **required parameters**, use a `data` object.
+If there are too many **optional parameters**, use an `options` object.
+
+```javascript
+function myFunc(a, b) {
+  return a + b
+}
+
+function getWorkout(workoutId, options) {
+  var q = new Parse.Query(Workout)
+  q.get(workoutId, options)
+}
+
+function searchWorkouts(options) {
+  verify(options).has({
+    name: {
+      type     : String,
+      optional : true,
+    },
+    offset: {
+      type    : Number,
+      default : 0,
+    },
+  })
+  ...
+}
+
+function saveDataForNextView(data) {
+  console.log('Saving data for next view: %o', data)
+  this._savedData = data
+}
+```
+
+
+###### Private functions
+
+All private function declarations should be defined *after* the `return` statement so that the main function body is easier to digest:
 
 ```javascript
 // Bad
