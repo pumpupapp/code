@@ -83,7 +83,8 @@ Protected member variables will should be treated like privates
 For example:
 
 ```java
-public class MyClass {
+public class MyClass 
+{
   public static final int SOME_CONSTANT = 42;
   public int publicField;
   private static MyClass SINGLETON;
