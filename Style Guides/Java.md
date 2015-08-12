@@ -139,6 +139,34 @@ findPostById
 
 ## Declarations
 
+### Section Comments
+
+Use `//region Name` and `//endregion`
+
+__GOOD__:
+
+```java
+
+//region ButtonAnimations
+    /**
+     * Need to get the buttons added after fragment animation is done otherwise they appear behind
+     */
+    public void showSelectionButtons()
+    {
+        if(_photoSelectIsOpen)
+        {
+            return;
+        }
+
+        _photoSelectIsOpen = true;
+
+        _root.addView(_cancelSelectPhotoButton);
+        _root.addView(_confirmSelectPhotoButton);
+    }
+//endregion
+
+```
+
 ### Access Level Modifiers
 
 Access level modifiers should be explicitly defined for classes, methods and
