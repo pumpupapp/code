@@ -80,16 +80,28 @@ Public member variables start with a letter.
 Singletons should be all caps: SINGLETON
 Protected member variables will should be treated like privates
 
+Variables with the same type should be grouped. A single return will seperate different types.
+
+Public static variables first, then public, then protected, then private
+
 For example:
 
 ```java
 public class MyClass 
 {
   public static final int SOME_CONSTANT = 42;
+  public static final int SOME_OTHER_CONSTANT = 42;
+
   public int publicField;
+  
   private static MyClass SINGLETON;
-  private int _private;
+  
   protected int _protected;
+  
+  private int _private;
+  private int _anotherPrivate;
+  
+  private string _privateString;
 }
 ```
 
