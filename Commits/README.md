@@ -1,7 +1,5 @@
 # Commits
 
-## Rules
-
 Commits **must** be:
 
 * Modular
@@ -15,40 +13,43 @@ Commits **must** be:
 
 ## Messages
 
-Commit message should answer the question: "What will this commit do?"
 
-e.g. `Add filters to workout searching`, `Fix scrolling issue on iOS`
+### Purpose
+* Speed up the code review process
+* Aid future maintainers
+* Summarize changes over a release
 
-* Purpose:
-	* Speed up the code review process.
-	* Aid future maintainers.
-	* Summarize changes over a release.
+### Structure
 
-* Structure:
-	* Subject
-		* Max 75 characters
-		* Lowercase
-		* Present tense (eg. `fix` instead of `fixed`)
-		* Start with a verb
-		  * Eg. `add function to get workout name` instead of `workout name function`
-		* Prefix with emoji(s)
-			* :memo: writing docs
-			* :bug: fixing a bug
-			* :star: adding a feature
-			* :art: tweaking the design
-			* :sparkles: cleaning up
-			* :white_check_mark: adding tests
-			* :racehorse: improving perf
-			* Use [others](http://www.emoji-cheat-sheet.com) sparingly
-	* Description *(optional)*
-		* Pivotal references (eg. `[finishes #12345678]`)
-		* Extended description of commit
+*Rule of thumb:* Commit message should answer the question: "What will this commit do?"
 
+#### Subject
+
+* Max 75 characters
+* Lowercase
+* Present tense (eg. `fix` instead of `fixed`)
+* Start with a verb
+  * Eg. `add function to get workout name` instead of `workout name function`
+* Prefix with emoji(s)
+	* :memo: writing docs
+	* :bug: fixing a bug
+	* :star: adding a feature
+	* :art: tweaking the design
+	* :sparkles: cleaning up
+	* :white_check_mark: adding tests
+	* :racehorse: improving perf
+	* Use [others](http://www.emoji-cheat-sheet.com) sparingly
+
+#### Description *(optional)*
+
+* Pivotal references (eg. `[finishes #12345678]`)
+* Extended description of commit
 * Special cases:
 	* `[ci skip]`
 	  * Prevents a CI build from being created
 	  * Useful for any changes that do not require a CI build
 	  	* Eg. a documentation change
+
 
 **Note: Every significant change should reference at least one Pivotal story.**
 
