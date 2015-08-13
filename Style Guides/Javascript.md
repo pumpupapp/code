@@ -4,14 +4,11 @@ A minimalist's guide to modern JavaScript.
 
 
 
+<br />
 ## Table of Contents
 
 - [Golden rule](#golden-rule)
 - [Structure](#structure)
-  - [Spaces or tabs](#spaces-or-tabs)
-  - [Line length](#line-length)
-  - [Whitespace](#whitespace)
-  - [Alignment](#alignment)
 - [Semicolons](#semicolons)
 - [Comments](#comments)
 - [Naming conventions](#naming conventions)
@@ -26,12 +23,14 @@ A minimalist's guide to modern JavaScript.
 
 
 
+<br />
 ## Golden rule
 
 The codebase should read as one voice - regardless of how many authored it.
 
 
 
+<br />
 ## Structure
 
 #### Spaces or tabs
@@ -128,6 +127,7 @@ var onePlusFifteen = one + fifteen
 ```
 
 
+<br />
 ## Semicolons
 
 Don't use them. JavaScript has reliable ASI (automatic-semicolon-insertion) which allows for cleaner looking code.
@@ -160,6 +160,7 @@ function mapArgs(args, fn) {
 ```
 
 
+<br />
 ## Comments
 
 Comments are necessary to describe to humans what a snippet of code is doing - however, they must be as concise as possible to make them easier to maintain as the snippet evolves.
@@ -313,6 +314,7 @@ Module comments are used to describe the contents of a module in a simple way.
 
 
 
+<br />
 ## Logs
 
 To aid in debugging, we add logs to our code.
@@ -352,6 +354,7 @@ console.error('Tried saving workout that isn’t owned %o', workout)
 
 
 
+<br />
 ## Naming conventions
 
 Be descriptive with your naming choice. Avoid unnecessary abbreviations because they might not be as obvious to someone else:
@@ -413,6 +416,7 @@ var MyObj = function(name) {
 ```
 
 
+<br />
 ## Variables
 
 Use multiple `var` declarations instead of comma separating them:
@@ -428,6 +432,7 @@ var someOtherVar = false
 ```
 
 
+<br />
 ## Functions
 
 Know the basic terminology:
@@ -609,6 +614,7 @@ function myLogFn() {
 
 
 
+<br />
 ## Objects
 
 Use the literals:
@@ -644,6 +650,7 @@ var object = {
 ```
 
 
+<br />
 ## Arrays
 
 Use the literals:
@@ -691,6 +698,7 @@ var longArray = [
 ```
 
 
+<br />
 ## Modules
 
 A module's imports and exports should appear at the very top of the file:
@@ -706,6 +714,7 @@ export const DEFAULT_TIMEOUT = 500
 ```
 
 
+<br />
 ## Conditionals
 
 Be explicit with your conditional checks by always using `===`, unless:
@@ -768,6 +777,7 @@ return // ...
 ```
 
 
+<br />
 ## Loops
 
 Avoid loops whenever possible. They aren't as flexible as native array methods, such as `forEach`, `map`, `filter`, etc.
@@ -803,6 +813,7 @@ do {
 
 
 
+<br />
 ## Annotations
 
 Use annotations whenever necessary to describe any action needed for a snippet of code. Use any of the following as suited:
