@@ -235,9 +235,9 @@ x = x + 1
 
 #### Block
 
-Use [DocBlockr](https://github.com/Warin/Sublime/tree/master/DocBlockr).
+Block comments should be made for **every function**, no matter how large or small. Use [DocBlockr](https://github.com/Warin/Sublime/tree/master/DocBlockr) to generate them.
 
-Here is a complete mock comment to exemplify all of the possible inclusions, as well as their ordering and spacing:
+Here is a complete mock comment to exemplify all of the possible inclusions, as well as their **ordering** and **spacing**:
 
 ```javascript
 /**
