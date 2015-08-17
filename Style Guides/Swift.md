@@ -186,6 +186,13 @@ __GOOD__:
     */
 ```
 
+### Section Comments
+
+Use the following format (there is no IDE support or shortcut for this so do it manually)
+
+```Swift
+  //Setters & Getters//
+```
 
 ## Classes and Structures
 
