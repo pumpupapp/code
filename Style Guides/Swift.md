@@ -179,6 +179,20 @@ When they are needed, use comments to explain **why** a particular piece of code
 
 Avoid block comments inline with code, as the code should be as self-documenting as possible. *Exception: This does not apply to those comments used to generate documentation.*
 
+__GOOD__:
+```swift
+    /*!
+    Ensure buttons that need to be off the screen are off, and the color picker is hidden.
+    */
+```
+
+### Section Comments
+
+Use the following format (there is no IDE support or shortcut for this so do it manually)
+
+```Swift
+  //Setters & Getters//
+```
 
 ## Classes and Structures
 

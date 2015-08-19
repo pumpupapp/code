@@ -262,20 +262,21 @@ If you have a lot of method parameters then they should start on a new line, and
 __GOOD__:
 ```java
         final Handler handler = new Handler();
-        handler.postDelayed(new Runnable()
-        {
-            @Override
-            public void run()
-            {
-                _root.setSystemUiVisibility(
-                      View.SYSTEM_UI_FLAG_FULLSCREEN
-                    | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
-                    | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
-                    | View.SYSTEM_UI_FLAG_FULLSCREEN
-                    | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-                    | View.SYSTEM_UI_FLAG_LAYOUT_STABLE);
-            }
-        }, 6000
+        handler.postDelayed(
+          new Runnable()
+          {
+              @Override
+              public void run()
+              {
+                  _root.setSystemUiVisibility(
+                        View.SYSTEM_UI_FLAG_FULLSCREEN
+                      | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
+                      | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                      | View.SYSTEM_UI_FLAG_FULLSCREEN
+                      | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                      | View.SYSTEM_UI_FLAG_LAYOUT_STABLE);
+              }
+          }, 6000
         );
 ```
 
@@ -399,14 +400,14 @@ If the lines are related to the same task, don't space. If there is a significan
         _cancelSelectPhotoButton.setMinimumWidth(buttonDimension);
         _cancelSelectPhotoButton.setMaxWidth(buttonDimension);
         _cancelSelectPhotoButton.setOnClickListener(
-                new View.OnClickListener() 
+            new View.OnClickListener() 
+            {
+                @Override
+                public void onClick(View v) 
                 {
-                    @Override
-                    public void onClick(View v) 
-                    {
-                        removeAllSelectionsAndClose();
-                    }
+                    removeAllSelectionsAndClose();
                 }
+            }
         );
         _cancelSelectPhotoButton.setX(offset);
         _cancelSelectPhotoButton.setY(ViewHelper.screenHeightPX(this) - buttonDimension - offset);
@@ -421,14 +422,14 @@ If the lines are related to the same task, don't space. If there is a significan
         _confirmSelectPhotoButton.setMinimumWidth(buttonDimension);
         _confirmSelectPhotoButton.setMaxWidth(buttonDimension);
         _confirmSelectPhotoButton.setOnClickListener(
-                new View.OnClickListener() 
+            new View.OnClickListener() 
+            {
+                @Override
+                public void onClick(View v) 
                 {
-                    @Override
-                    public void onClick(View v) 
-                    {
-                        beginCloseSelectPhoto();
-                    }
+                    beginCloseSelectPhoto();
                 }
+            }
         );
         _confirmSelectPhotoButton.setPadding(0, 0, 0, 0);
         _confirmSelectPhotoButton.setScaleType(ImageView.ScaleType.FIT_XY);
