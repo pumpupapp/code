@@ -72,8 +72,15 @@ An App Release: a version release that contains multiple Project Releases. Eg: 3
 
 ### Title
 
-* Starts with an action
+* Starts with context in square brackets
+* Descriptive
 * Concise
+
+#### Examples
+
+> [Start Workout] Video doesn't autoplay after finishing first warmup exercise without audio
+
+> [Find Friends] [Subscription] Remove find friends and subscription from app
 
 
 
