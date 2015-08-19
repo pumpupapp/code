@@ -103,9 +103,12 @@ Quick tags to allow categorization and searching of stories.
 * *Epic
 * OS eg. **ios**
 * Device eg. **iphone 6+**
-* Version or date the build was taken from (eventually commit hash)
 * **regression** if it's something that used to work
-* **low priority** if it's something that isn't critical
+* **cannot reproduce** if it's something that seems to have been fixed
+* **sev-high** if it's something that is critical
+* **sev-med** if it's something that isn't critical but is important
+* **sev-low** if it's something that isn't important
+* Version or date the build was taken from (eventually commit hash)
 
 *Required
 
