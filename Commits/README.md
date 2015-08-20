@@ -5,7 +5,7 @@ Commits **must** be:
 * Modular
   * Easy to understand the changes made without having to jump between multiple commits.
   * Example: Renaming a function and renaming it everywhere that it is used should be a single commit.
-  * Example: Two methods added to a module should be a single commit, but two unrelated methods are added to two separate modules should be two separate commits.
+  * Example: Two methods added to a module should be a single commit, but two *unrelated* methods added to two *separate* modules should be two separate commits.
 * Ordered
   * Independent of future commits.
   * Example: If Commit A introduces new functionality, and Commit B consumes the new functionality, then Commit A should be committed before Commit B.
@@ -30,7 +30,7 @@ Commits **must** be:
 
 ##### Order
 
-1. Emoji(s)
+1. Emoji
   * Separate multiple with space
   * Use all that apply
     * :memo: writing docs
@@ -82,7 +82,7 @@ Commits **must** be:
 
 ```
 // Subject
-[ci skip] :memo: [Feed] Add documentation for feed view
+:memo: [Feed] Add documentation for feed view
 
 // Description
 [#12345678 #12345679]
@@ -93,4 +93,12 @@ Commits **must** be:
 :sparkles: [Notification]
 
 // No description
+```
+
+```
+// Subject
+:memo: [Commits] Add documentation on how to write commit messages
+
+// Description
+[ci skip]
 ```
