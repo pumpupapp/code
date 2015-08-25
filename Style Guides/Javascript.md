@@ -11,6 +11,7 @@ A minimalist's guide to modern JavaScript.
 - [Structure](#structure)
 - [Semicolons](#semicolons)
 - [Comments](#comments)
+- [Logs](#logs)
 - [Naming conventions](#naming conventions)
 - [Variables](#variables)
 - [Functions](#functions)
@@ -345,7 +346,7 @@ Be sure to use the right type of log for your scenario:
 ### Examples
 
 ```javascript
-console.log('Saving workout %o', workout)
+console.log('User clicked save workout %o', workout)
 console.info('Workout saved %o', workout)
 console.assert(!!workout, 'Workout does not exist')
 console.warn('Workout.saveChildren is deprecated')
