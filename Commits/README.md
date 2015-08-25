@@ -33,13 +33,13 @@ Commits **must** be:
 1. Emoji
   * Separate multiple with space
   * Use all that apply
-    * :memo: writing docs
-    * :bug: fixing a bug
-    * :star: adding a feature
-    * :art: tweaking the design
-    * :sparkles: cleaning up
-    * :white_check_mark: adding tests
-    * :racehorse: improving perf
+    * :memo: `:memo:` writing docs
+    * :bug: `:bug:` fixing a bug
+    * :star: `:star:` adding a feature
+    * :art: `:art:` tweaking the design
+    * :sparkles: `:sparkles:` cleaning up
+    * :white_check_mark: `:white_check_mark:` adding tests
+    * :racehorse: `:racehorse:` improving perf
     * Use [others](http://www.emoji-cheat-sheet.com) sparingly
   * Eg. `:bug: :sparkles:`
 * Context
