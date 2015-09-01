@@ -265,11 +265,7 @@ let module = moduleInjector({
 <br />
 ## Writing tests
 
-The root of all tests is the `index.tests.jsx` file. This `require`s all the other tests.
 
-
-
-<br />
 ### Describing modules and units
 
 
@@ -324,10 +320,6 @@ describe('<Modal />', () => {
   })
 })
 ```
-
-
-<br />
-###### [More about stubs](http://sinonjs.org/docs/#spies)
 
 
 
