@@ -1,5 +1,5 @@
 # Legend
 
-* [Javascript](Javascript.md)
+* [JavaScript](JavaScript.md)
 * [Swift](Swift.md)
 * [Java](Java.md)
