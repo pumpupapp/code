@@ -7,7 +7,6 @@ A minimalist's guide to modern JavaScript.
 <br />
 ## Table of Contents
 
-- [Golden rule](#golden-rule)
 - [Structure](#structure)
 - [Semicolons](#semicolons)
 - [Comments](#comments)
@@ -21,13 +20,6 @@ A minimalist's guide to modern JavaScript.
 - [Conditionals](#conditionals)
 - [Loops](#loops)
 - [Annotations](#annotations)
-
-
-
-<br />
-## Golden rule
-
-The codebase should read as one voice - regardless of how many authored it.
 
 
 
