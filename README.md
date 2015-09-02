@@ -9,6 +9,7 @@
 * [Commits](Commits)
 * [Pull Requests](Pull Requests)
 * [Code Reviews](Code Reviews)
+* [Testing](Testing)
 * [Tools](Tools)
 
 <br />
