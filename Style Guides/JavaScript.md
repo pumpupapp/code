@@ -11,7 +11,7 @@ A minimalist's guide to modern JavaScript.
 - [Semicolons](#semicolons)
 - [Comments](#comments)
 - [Logs](#logs)
-- [Naming conventions](#naming conventions)
+- [Naming conventions](#naming-conventions)
 - [Variables](#variables)
 - [Functions](#functions)
 - [Objects](#objects)

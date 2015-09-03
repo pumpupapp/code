@@ -1,8 +1,7 @@
 # Legend
 
-* [Golden rule](#golden rule)
+* [Golden rule](#golden-rule)
 * [Annotations](#annotations)
-
 * [JavaScript](JavaScript.md)
 * [SCSS](SCSS.md)
 * [Swift](Swift.md)
