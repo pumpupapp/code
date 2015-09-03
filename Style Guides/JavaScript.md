@@ -19,7 +19,6 @@ A minimalist's guide to modern JavaScript.
 - [Modules](#modules)
 - [Conditionals](#conditionals)
 - [Loops](#loops)
-- [Annotations](#annotations)
 
 
 
@@ -803,19 +802,6 @@ do {
   // ...
 } while (value === true)
 ```
-
-
-
-<br />
-## Annotations
-
-Use annotations whenever necessary to describe any action needed for a snippet of code. Use any of the following as suited:
-
-- `TODO`     : for missing functionality that should be added at a later date
-- `FIXME`    : for broken code that must be fixed
-- `OPTIMIZE` : for code that is inefficient and may become a bottleneck
-- `HACK`     : for the use of a questionable (or ingenious) coding practice
-- `REVIEW`   : for code that should be reviewed to confirm implementation
 
 
 
