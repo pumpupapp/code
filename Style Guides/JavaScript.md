@@ -7,12 +7,11 @@ A minimalist's guide to modern JavaScript.
 <br />
 ## Table of Contents
 
-- [Golden rule](#golden-rule)
 - [Structure](#structure)
 - [Semicolons](#semicolons)
 - [Comments](#comments)
 - [Logs](#logs)
-- [Naming conventions](#naming conventions)
+- [Naming conventions](#naming-conventions)
 - [Variables](#variables)
 - [Functions](#functions)
 - [Objects](#objects)
@@ -20,14 +19,6 @@ A minimalist's guide to modern JavaScript.
 - [Modules](#modules)
 - [Conditionals](#conditionals)
 - [Loops](#loops)
-- [Annotations](#annotations)
-
-
-
-<br />
-## Golden rule
-
-The codebase should read as one voice - regardless of how many authored it.
 
 
 
@@ -811,19 +802,6 @@ do {
   // ...
 } while (value === true)
 ```
-
-
-
-<br />
-## Annotations
-
-Use annotations whenever necessary to describe any action needed for a snippet of code. Use any of the following as suited:
-
-- `TODO`     : for missing functionality that should be added at a later date
-- `FIXME`    : for broken code that must be fixed
-- `OPTIMIZE` : for code that is inefficient and may become a bottleneck
-- `HACK`     : for the use of a questionable (or ingenious) coding practice
-- `REVIEW`   : for code that should be reviewed to confirm implementation
 
 
 
