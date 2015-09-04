@@ -279,7 +279,7 @@ Here is a complete mock comment to exemplify all of the possible inclusions, as 
  */
 ```
 
-#### Whitespace
+##### Whitespace
 Leave one line break between the method's description and its parameters only if the description takes more than two lines.
 
 
@@ -293,7 +293,7 @@ Sectional comments are used to organize code in modules into logical sections.
 ///////////////////////
 ```
 
-#### Whitespace
+##### Whitespace
 Leave five line breaks above a sectional comment and three line breaks after. 
 
 
