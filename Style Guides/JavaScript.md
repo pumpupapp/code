@@ -324,11 +324,11 @@ To aid in debugging, we add logs to our code.
 ### Types
 
 Be sure to use the right type of log for your scenario:
-* `console.log` : When a user does something
-* `console.info` : When something happens without a user doing it
+* `console.log`    : When something happens without a user doing it
+* `console.info`   : When a user does something
 * `console.assert` : When an assertion needs to be made
-* `console.warn` : When something has gone wrong
-* `console.error` : When something has gone critically wrong
+* `console.warn`   : When something has gone wrong
+* `console.error`  : When something has gone critically wrong
 
 **Do not** use these types of logs:
 * `console.debug`
