@@ -294,7 +294,7 @@ Sectional comments are used to organize code in modules into logical sections.
 ```
 
 ##### Whitespace
-Leave five line breaks above a sectional comment and three line breaks after. 
+Leave five line breaks above a sectional comment and three line breaks after.
 
 
 #### Module

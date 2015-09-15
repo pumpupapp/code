@@ -268,6 +268,32 @@ let module = moduleInjector({
 
 ### Describing modules and units
 
+- There should be 3 spaces between adjacent `descibe`s and 2 spaces between adjacent `it`s
+```jsx
+describe('/WorkoutExercise', () => {
+
+
+
+  describe('::getCalories', () => {
+
+
+    it('returns ...', () => {
+      // ...
+    })
+
+
+    it('returns ...', () => {
+      // ...
+    })
+  })
+
+
+
+  describe('::getCalories', () => {
+    // ...
+  })
+})
+```
 
 - When describing a **directory** or **module**, use a leading slash (`/`):
 ```jsx
@@ -335,6 +361,21 @@ it('...')
 
 <br />
 ### Making assertions
+
+- Assertions should always begin with the action e.g `return`, `get`, `save`, `throws` etc.
+
+```jsx
+describe('/Text'), () => {
+
+
+
+  describe('#linkMention', () => {
+
+
+    it('returns a string with the the mentions wrapped in anchor tags')
+  })
+}
+```
 
 [TODO]
 
