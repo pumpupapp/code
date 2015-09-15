@@ -372,7 +372,7 @@ describe('/Text'), () => {
   describe('#linkMention', () => {
 
 
-    it('returns a string with the the mentions wrapped in anchor tags')
+    it('returns a string with the mentions wrapped in anchor tags')
   })
 }
 ```
