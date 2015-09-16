@@ -294,7 +294,7 @@ Sectional comments are used to organize code in modules into logical sections.
 ```
 
 ##### Whitespace
-Leave five line breaks above a sectional comment and three line breaks after. 
+Leave five line breaks above a sectional comment and three line breaks after.
 
 
 #### Module
@@ -710,6 +710,21 @@ export const DEFAULT_TIMEOUT = 500
 // ...rest of the file
 ```
 
+A module's imports should be grouped by remote and then local, and sorted alphabetically in each group:
+
+```javascript
+let _           = require('lodash')
+let Parse       = require('parse')
+let React       = require('react')
+
+let Icon        = require('components/icon/icon')
+let ACTIVITY    = require('constants/activity')
+let DISTANCE    = require('constants/distance')
+let INTENSITY   = require('constants/intensity')
+let ActivityLog = require('models/ActivityLog')
+let datetime    = require('utils/datetime')
+```
+
 
 <br />
 ## Conditionals
@@ -771,6 +786,75 @@ if (something === true) {
   return // ...
 }
 return // ...
+```
+
+
+For conditions that require more than 1 line, use the following format:
+
+```javascript
+// Only ORs
+if (
+  condition1 ||
+  condition2 ||
+  condition3
+) {
+  // ...
+}
+
+// Only ANDs
+if (
+  condition1 &&
+  condition2 &&
+  condition3
+) {
+  // ...
+}
+
+// ORs and ANDs
+if (
+  (
+    condition1 &&
+    condition2
+  )
+  ||
+  condition3
+  ||
+  (
+    condition4
+    ||
+    (
+      condition5 &&
+      condition6
+    )
+  )
+) {
+  // ...
+}
+```
+
+Make complex conditions simpler by creating variables:
+```javascript
+let complexCondition = (
+  condition4
+  ||
+  (
+    condition5 &&
+    condition6
+  )
+)
+
+if (
+  (
+    condition1 &&
+    condition2
+  )
+  ||
+  condition3
+  ||
+  complexConditiond
+) {
+  // ...
+}
 ```
 
 
