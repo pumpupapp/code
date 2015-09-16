@@ -283,10 +283,14 @@ Here is a complete mock comment to exemplify all of the possible inclusions, as 
 Leave one line break between the method's description and its parameters only if the description takes more than two lines.
 
 
-#### Section
+#### Sectional
 
 Sectional comments are used to organize code in modules into logical sections.
-
+They can be easily generated using [DocBlockr](https://github.com/Warin/Sublime/tree/master/DocBlockr).
+```javascript
+// BEST SECTION EVER[CTRL+RETURN]
+```
+becomes
 ```javascript
 ///////////////////////
 // BEST SECTION EVER //
@@ -294,7 +298,30 @@ Sectional comments are used to organize code in modules into logical sections.
 ```
 
 ##### Whitespace
-Leave five line breaks above a sectional comment and three line breaks after.
+Leave five line breaks above a sectional comment and three line breaks after:
+```javascript
+//////////////
+// SECTION1 //
+//////////////
+
+
+
+function myFunc() {
+  // ...
+}
+
+
+
+
+
+//////////////
+// SECTION2 //
+//////////////
+
+
+
+// ...
+```
 
 
 #### Module
@@ -307,6 +334,8 @@ Module comments are used to describe the contents of a module in a simple way.
  * while drinking coffee. In here, you can find out exactly
  * what this file contains in a concise tidbit of text.
  */
+
+// Rest of file...
 ```
 
 
