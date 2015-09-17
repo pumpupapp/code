@@ -37,7 +37,7 @@ Keep code lines < 80 characters per line. If you're going over, that means it's 
 
 #### Whitespace
 
-Maintain at least 2 line breaks between your top-level functions and at least 1 line break between bodies of functions where it helps readability:
+- Maintain at least 2 line breaks between your top-level functions and at least 1 line break between bodies of functions where it helps readability:
 
 ###### Bad
 
@@ -88,6 +88,59 @@ function getSomeAmazingThings() {
 function doSomeOtherAmazingThing() {
   // ...
 }
+```
+
+- There should be 3 spaces between adjacent `descibe`s and 2 spaces between adjacent `it`s when writing tests
+
+###### Bad
+
+```jsx
+describe('/WorkoutExercise', () => {
+  describe('::getCalories', () => {
+    it('returns ...', () => {
+      // ...
+    })
+    it('returns ...', () => {
+      // ...
+    })
+  })
+  describe('::getCalories', () => {
+    // ...
+  })
+})
+```
+
+###### Good
+
+```jsx
+describe('/WorkoutExercise', () => {
+
+
+
+  describe('::getCalories', () => {
+
+
+    it('returns ...', () => {
+      // ...
+    })
+
+
+    it('returns ...', () => {
+      // ...
+    })
+
+
+  })
+
+
+
+  describe('::getCalories', () => {
+    // ...
+  })
+
+
+
+})
 ```
 
 #### Alignment
