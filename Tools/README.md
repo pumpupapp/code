@@ -40,6 +40,12 @@ Once you’ve set up Package Control, you may start installing plugins by hittin
 
 To install all of these plugins (and some more), use th *Sublime Packages.zip* file and merge it with `Sublime Text.app -> Show Package Contents -> Contents -> MacOS -> Packages`.
 
+- **GitHub Flavored Markdown Preview** preview markdowns in github
+
+To install Github Flavored Markdown go here: [GitHub Flavored Markdown]  (https://packagecontrol.io/packages/GitHub%20Flavored%20Markdown%20Preview)
+
+To install the package (after you've run the python script) `hit cmd + shift + p` and click `Package: Install Package` and then click `Github Flavored Markdown`.
+
 You can also spill some paint onto Sublime’s default theme. Some recommendations are:
 
 - **Predawn** ***

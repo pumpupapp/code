@@ -37,7 +37,7 @@ Keep code lines < 80 characters per line. If you're going over, that means it's 
 
 #### Whitespace
 
-- Maintain at least 2 line breaks between your top-level functions and at least 1 line break between bodies of functions where it helps readability:
+Maintain at least 2 line breaks between your top-level functions and at least 1 line break between bodies of functions where it helps readability:
 
 ###### Bad
 
@@ -88,59 +88,6 @@ function getSomeAmazingThings() {
 function doSomeOtherAmazingThing() {
   // ...
 }
-```
-
-- There should be 3 spaces between adjacent `descibe`s and 2 spaces between adjacent `it`s when writing tests
-
-###### Bad
-
-```jsx
-describe('/WorkoutExercise', () => {
-  describe('::getCalories', () => {
-    it('returns ...', () => {
-      // ...
-    })
-    it('returns ...', () => {
-      // ...
-    })
-  })
-  describe('::getCalories', () => {
-    // ...
-  })
-})
-```
-
-###### Good
-
-```jsx
-describe('/WorkoutExercise', () => {
-
-
-
-  describe('::getCalories', () => {
-
-
-    it('returns ...', () => {
-      // ...
-    })
-
-
-    it('returns ...', () => {
-      // ...
-    })
-
-
-  })
-
-
-
-  describe('::getCalories', () => {
-    // ...
-  })
-
-
-
-})
 ```
 
 #### Alignment
@@ -336,10 +283,14 @@ Here is a complete mock comment to exemplify all of the possible inclusions, as 
 Leave one line break between the method's description and its parameters only if the description takes more than two lines.
 
 
-#### Section
+#### Sectional
 
 Sectional comments are used to organize code in modules into logical sections.
-
+They can be easily generated using [DocBlockr](https://github.com/Warin/Sublime/tree/master/DocBlockr).
+```javascript
+// BEST SECTION EVER[CTRL+RETURN]
+```
+becomes
 ```javascript
 ///////////////////////
 // BEST SECTION EVER //
@@ -347,7 +298,30 @@ Sectional comments are used to organize code in modules into logical sections.
 ```
 
 ##### Whitespace
-Leave five line breaks above a sectional comment and three line breaks after.
+Leave five line breaks above a sectional comment and three line breaks after:
+```javascript
+//////////////
+// SECTION1 //
+//////////////
+
+
+
+function myFunc() {
+  // ...
+}
+
+
+
+
+
+//////////////
+// SECTION2 //
+//////////////
+
+
+
+// ...
+```
 
 
 #### Module
@@ -360,6 +334,8 @@ Module comments are used to describe the contents of a module in a simple way.
  * while drinking coffee. In here, you can find out exactly
  * what this file contains in a concise tidbit of text.
  */
+
+// Rest of file...
 ```
 
 
@@ -382,11 +358,11 @@ To aid in debugging, we add logs to our code.
 ### Types
 
 Be sure to use the right type of log for your scenario:
-* `console.log` : When a user does something
-* `console.info` : When something happens without a user doing it
+* `console.log`    : When something happens without a user doing it
+* `console.info`   : When a user does something
 * `console.assert` : When an assertion needs to be made
-* `console.warn` : When something has gone wrong
-* `console.error` : When something has gone critically wrong
+* `console.warn`   : When something has gone wrong
+* `console.error`  : When something has gone critically wrong
 
 **Do not** use these types of logs:
 * `console.debug`
@@ -763,6 +739,21 @@ export const DEFAULT_TIMEOUT = 500
 // ...rest of the file
 ```
 
+A module's imports should be grouped by remote and then local, and sorted alphabetically in each group:
+
+```javascript
+let _           = require('lodash')
+let Parse       = require('parse')
+let React       = require('react')
+
+let Icon        = require('components/icon/icon')
+let ACTIVITY    = require('constants/activity')
+let DISTANCE    = require('constants/distance')
+let INTENSITY   = require('constants/intensity')
+let ActivityLog = require('models/ActivityLog')
+let datetime    = require('utils/datetime')
+```
+
 
 <br />
 ## Conditionals
@@ -824,6 +815,75 @@ if (something === true) {
   return // ...
 }
 return // ...
+```
+
+
+For conditions that require more than 1 line, use the following format:
+
+```javascript
+// Only ORs
+if (
+  condition1 ||
+  condition2 ||
+  condition3
+) {
+  // ...
+}
+
+// Only ANDs
+if (
+  condition1 &&
+  condition2 &&
+  condition3
+) {
+  // ...
+}
+
+// ORs and ANDs
+if (
+  (
+    condition1 &&
+    condition2
+  )
+  ||
+  condition3
+  ||
+  (
+    condition4
+    ||
+    (
+      condition5 &&
+      condition6
+    )
+  )
+) {
+  // ...
+}
+```
+
+Make complex conditions simpler by creating variables:
+```javascript
+let complexCondition = (
+  condition4
+  ||
+  (
+    condition5 &&
+    condition6
+  )
+)
+
+if (
+  (
+    condition1 &&
+    condition2
+  )
+  ||
+  condition3
+  ||
+  complexConditiond
+) {
+  // ...
+}
 ```
 
 
