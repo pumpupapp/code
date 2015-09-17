@@ -323,6 +323,8 @@ function myFunc() {
 // ...
 ```
 
+###### Whitespace
+
 There should be 3 spaces between adjacent `descibe`s and 2 spaces between adjacent `it`s when writing tests
 ```jsx
 describe('/WorkoutExercise', () => {
