@@ -325,6 +325,12 @@ describe('<Modal />', () => {
 <br />
 ### Defining unit functionality
 
+- Assertions should always begin with the action e.g `returns`, `gets`, `saves`, `throws` etc.
+
+```jsx
+it('returns a string with the the mentions wrapped in anchor tags', ...)
+```
+
 [TODO]
 
 ```jsx
@@ -334,14 +340,6 @@ it('...')
 
 <br />
 ### Making assertions
-
-- Assertions should always begin with the action e.g `returns`, `gets`, `saves`, `throws` etc.
-
-```jsx
-  it('returns a string with the the mentions wrapped in anchor tags')
-    // ...
-  })
-```
 
 [TODO]
 

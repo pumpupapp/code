@@ -348,12 +348,6 @@ describe('/WorkoutExercise', () => {
 
 
 
-  describe('::getCalories', () => {
-    // ...
-  })
-
-
-
 })
 ```
 
