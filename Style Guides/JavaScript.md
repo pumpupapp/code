@@ -329,8 +329,6 @@ There should be 3 spaces between adjacent `descibe`s and 2 spaces between adjace
 ```jsx
 describe('/WorkoutExercise', () => {
 
-
-
   describe('::getCalories', () => {
 
 

@@ -325,23 +325,14 @@ describe('<Modal />', () => {
 <br />
 ### Defining unit functionality
 
-- Assertions should always begin with the action e.g `returns`, `gets`, `saves`, `throws` etc.
+- Tests should always begin with the action e.g `returns`, `gets`, `saves`, `throws` etc.
 
 ```jsx
-it('returns a string with the the mentions wrapped in anchor tags', ...)
+it('returns a string with the mentions wrapped in anchor tags', ...)
 ```
-
-[TODO]
-
-```jsx
-it('...')
-```
-
 
 <br />
 ### Making assertions
-
-[TODO]
 
 ```jsx
 fn.callCount.should.eql(1)
