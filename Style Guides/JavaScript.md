@@ -345,6 +345,10 @@ describe('/WorkoutExercise', () => {
 
 
 
+  describe('::getWeight', () => {
+    // ...
+  })
+
 })
 ```
 
