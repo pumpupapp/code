@@ -19,6 +19,7 @@ A minimalist's guide to modern JavaScript.
 - [Modules](#modules)
 - [Conditionals](#conditionals)
 - [Loops](#loops)
+- [Tests](#tests)
 
 
 
@@ -322,35 +323,7 @@ function myFunc() {
 
 // ...
 ```
-#### Tests
 
-There should be 3 spaces between adjacent `descibe`s and 2 spaces between adjacent `it`s when writing tests
-```jsx
-describe('/WorkoutExercise', () => {
-
-  describe('::getCalories', () => {
-
-
-    it('returns ...', () => {
-      // ...
-    })
-
-
-    it('returns ...', () => {
-      // ...
-    })
-
-
-  })
-
-
-
-  describe('::getWeight', () => {
-    // ...
-  })
-
-})
-```
 
 #### Module
 
@@ -668,6 +641,7 @@ function myLogFn() {
 
 
 
+
 <br />
 ## Objects
 
@@ -952,7 +926,52 @@ do {
 
 
 
+<br />
+## Tests
 
+A good test ensures that a unit of code behaves as expected without caring about the implementation. For every test case, there should be 1 corresponding `it`. Inside of an `it`, there may be multiple tests for different examples of the test case.
+
+
+###### Whitespace
+
+There should be 3 spaces between adjacent `descibe`s and 2 spaces between adjacent `it`s.
+There should be 2 spaces between nested `describe`s and 1 space between nested `it`s.
+```jsx
+describe('/WorkoutExercise', () => {
+
+
+  describe('::getCalories', () => {
+
+    it('returns ...', () => {
+      // ...
+    })
+
+
+    it('returns ...', () => {
+      // ...
+    })
+
+  })
+
+
+
+  describe('.propTypes', () => {
+    
+    
+    describe('.range', () => {
+    
+      it('...', () => {
+        // ...
+      })
+    
+    })
+    
+    
+  })
+  
+
+})
+```
 
 
 
