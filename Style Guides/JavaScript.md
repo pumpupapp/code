@@ -935,19 +935,20 @@ A good test ensures that a unit of code behaves as expected without caring about
 ###### Whitespace
 
 There should be 3 spaces between adjacent `descibe`s and 2 spaces between adjacent `it`s.
-There should be 2 spaces between nested `describe`s and 1 space between nested `it`s.
+
+There should be 2 spaces before nested `describe`s and 1 space before nested `it`s.
 ```jsx
 describe('/WorkoutExercise', () => {
 
 
   describe('::getCalories', () => {
 
-    it('returns ...', () => {
+    it('...', () => {
       // ...
     })
 
 
-    it('returns ...', () => {
+    it('...', () => {
       // ...
     })
 
