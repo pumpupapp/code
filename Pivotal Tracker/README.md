@@ -13,7 +13,7 @@ The tracking tools provided are:
 
 An epic contains all stories that relate to a specific project.
 
-### Guidelines
+#### Guidelines
 
 * Be as specific as possible
   * Eg. If you found a bug with creating a workout, use the **custom workouts** epic instead of the **mobile** epic
@@ -25,15 +25,15 @@ An epic contains all stories that relate to a specific project.
 
 
 
-
+<br />
 ## Stories
 
 A story contains information of a particular feature, chore, bug, or release. It is usually provided with a description, requester, assignee, labels, etc.
 
 
-### Types
+#### Types
 
-#### Feature
+##### Feature
 
 Any new or improved functionality.
 
@@ -48,12 +48,12 @@ Lifecycle:
 * Accepted/Rejected: Demoed
 
 
-#### Chore
+##### Chore
 
 Any task that does not add any new functionality or fix any existing functionality. An example is clean up, or work not related to code.
 
 
-#### Bug
+##### Bug
 
 A report of broken functionality.
 
@@ -62,7 +62,7 @@ Write steps on how to reproduce in the description and, if helpful, attach scree
 (See [Feature](#Feature))
 
 
-#### Release
+##### Release
 
 A Project Release: a release tied to project epics that go into an App Release. Eg: Android Camera v1
 
@@ -70,13 +70,14 @@ An App Release: a version release that contains multiple Project Releases. Eg: 3
 
 
 
-### Title
+<br />
+#### Title
 
 * Starts with context in square brackets
 * Descriptive
 * Concise
 
-#### Examples
+##### Examples
 
 > [Start Workout] Video doesn't autoplay after finishing first warmup exercise without audio
 
@@ -84,18 +85,19 @@ An App Release: a version release that contains multiple Project Releases. Eg: 3
 
 
 
-### Owners
+#### Owners
 
 People assigned to work on a story.
 
 
 
-### Description
+#### Description
 
 Specific details of the story.
 
 
 
+<br />
 ### Labels
 
 Quick tags to allow categorization and searching of stories.
@@ -113,6 +115,8 @@ Quick tags to allow categorization and searching of stories.
 *Required
 
 
-### Tasks
 
-A breakdown of a story into smaller actionable tasks that will collectively complete the story.
+<br />
+#### Tasks
+
+A breakdown of a story into smaller actionable tasks that will collectively complete the story. Once all tasks are complete, the story should be marked as **Finished**.
