@@ -98,7 +98,7 @@ Specific details of the story.
 
 
 <br />
-### Labels
+#### Labels
 
 Quick tags to allow categorization and searching of stories.
 
