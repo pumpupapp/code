@@ -19,6 +19,7 @@ A minimalist's guide to modern JavaScript.
 - [Modules](#modules)
 - [Conditionals](#conditionals)
 - [Loops](#loops)
+- [Tests](#tests)
 
 
 
@@ -640,6 +641,7 @@ function myLogFn() {
 
 
 
+
 <br />
 ## Objects
 
@@ -924,7 +926,64 @@ do {
 
 
 
+<br />
+## Tests
 
+A good test ensures that a unit of code behaves as expected without caring about the implementation. For every test case, there should be 1 corresponding `it`. Inside of an `it`, there may be multiple tests for different examples of the test case.
+
+
+###### Whitespace
+
+There should be 3 spaces between adjacent `descibe`s and 2 spaces between adjacent `it`s.
+
+There should be 2 spaces before nested `describe`s and 1 space before nested `it`s.
+
+Similarly to functions, if there are more than 3 lines inside an `it`, there should be a space of padding in the function.
+```jsx
+describe('/WorkoutExercise', () => {
+
+
+  describe('::getCalories', () => {
+
+    it('...', () => {
+      let a = 1
+      let b = 2
+      a.should.not.eql(b)
+    })
+
+
+    it('...', () => {
+      
+      let a = 1
+      let b = 2
+      let c = a + b
+      
+      a.should.not.eql(b)
+      c.should.eql(a + b)
+      
+    })
+
+  })
+
+
+
+  describe('.propTypes', () => {
+    
+    
+    describe('.range', () => {
+    
+      it('...', () => {
+        // ...
+      })
+    
+    })
+    
+    
+  })
+  
+
+})
+```
 
 
 

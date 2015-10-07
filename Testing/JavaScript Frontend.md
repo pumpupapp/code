@@ -268,7 +268,6 @@ let module = moduleInjector({
 
 ### Describing modules and units
 
-
 - When describing a **directory** or **module**, use a leading slash (`/`):
 ```jsx
 describe('/components', () => {
@@ -326,17 +325,14 @@ describe('<Modal />', () => {
 <br />
 ### Defining unit functionality
 
-[TODO]
+- Tests should always begin with the action e.g `returns`, `gets`, `saves`, `throws` etc.
 
 ```jsx
-it('...')
+it('returns a string with the mentions wrapped in anchor tags', ...)
 ```
-
 
 <br />
 ### Making assertions
-
-[TODO]
 
 ```jsx
 fn.callCount.should.eql(1)

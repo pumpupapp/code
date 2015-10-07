@@ -1,10 +1,8 @@
 # Code Reviews (CR)
 
-> *Goes up to girl*
->
-> Hey! I have a request: can you pull my branch?
+A CR is a review of the proposed changes in a [PR](/Pull Requests/README.md).
 
-A CR is a review of the proposed changes in a PR.
+*It is the responsibility of the Code Reviewer to ensure that no bad code enters the codebase.*
 
 ## Rules
 
@@ -16,10 +14,10 @@ A CR is a review of the proposed changes in a PR.
 ## Steps
 
 1. **Developer** assigns **Reviewer** to PR.
-* *Optional:* **Developer** shoots **Reviewer** with a Nerf™ gun.
+  * *Optional:* **Developer** shoots **Reviewer** with a Nerf™ gun.
 * **Reviewer** reviews every change, making any necessary comments along the way.
 * **Reviewer** assigns **Developer** to PR.
-* *Optional:* **Reviewer** shoots **Developer** with a Nerf™ gun.
+  * *Optional:* **Reviewer** shoots **Developer** with a Nerf™ gun.
 * If there are any comments, **Developer** responds to each comment with either a follow-up comment or a code change. Once another review is ready, go back to (1).
 * **Reviewer** may request a demo of the proposed changes. If any bugs are found, **Developer** must fix fix them and demo again.
 * **Reviewer** merges the PR and deletes the branch.
