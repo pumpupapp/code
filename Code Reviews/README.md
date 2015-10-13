@@ -6,9 +6,10 @@ A CR is a review of the proposed changes in a [PR](/Pull Requests/README.md).
 
 ## Rules
 
-1. A CR **must** be done before a PR can be merged.
-* A CR **must not** be done by any authors of the PR.
-* A PR **must not** be merged until all CI builds pass.
+1. A CR must be **completed** before a PR can be merged.
+* A CR cannot be performed by any **authors** of the PR.
+* A PR cannot be merged until **all CI builds pass.**
+* A CR must be performed by the Reviewer **within 24 hours** of assignment.
 
 
 ## Steps
