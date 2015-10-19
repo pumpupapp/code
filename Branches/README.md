@@ -13,7 +13,7 @@ Feature bug | Fixes a bug in a feature | Project branch ~> Project branch | `fea
 Release bug | Fixes a bug in a release | Release branch ~> Release branch | `release/RELEASE_NAME.bugfix.BUGFIX_NAME`<br />Eg. `release/v3.3.0.bugfix.workout-saving`
 Hotfix | Fixes a bug in production | `master` ~> `master` | `hotfix/HOTFIX_NAME`<br />Eg. `hotfix/workout-saves-endlessly`
 
-
+NB: You must NEVER (EVER-EVER) pull from a grand-parent+ branch (e.g. Develop into feature/somefeature-someSubFeature. Always pull from the parent branch.
 
 <br />
 ### Permissions
