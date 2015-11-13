@@ -241,6 +241,8 @@ Here is a complete mock comment to exemplify all of the possible inclusions, as 
  * TODO: make all your comments this awesome
  * FIXME: just kidding, my code is gold
  *
+ * @private
+ *
  * @example
  *   callThisFunctionWithArgs("myString", 123, {
  *     prop1: '1',
@@ -274,9 +276,6 @@ Here is a complete mock comment to exemplify all of the possible inclusions, as 
  * @param {Object} [obj] An optional object.
  *
  * @return {Number} Always returns 12345 because yolo.
- *
- * @private
- * @admin
  */
 ```
 
