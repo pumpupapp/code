@@ -44,6 +44,7 @@ Don’t nest selectors. Instead, just indent to imply a nested DOM structure:
 .modal {
   // ...
 }
+
   .modal-content {
     // ...
   }
@@ -216,7 +217,6 @@ They should always appear *before* the line they are describing:
 
 ```scss
 .selector {
-
   // Compensate for border
   margin-top: 1px;
 }
@@ -225,28 +225,43 @@ They should always appear *before* the line they are describing:
 
 #### Block
 
-Block comments should be made for **every block**, no matter how large or small.
+Block comments should be made for any file to impose certain conventions or separate large blocks of code (eg. variable definition files).
 
 ```scss
 /**
- * A modal component that overlays a dialog box above all other content.
+ * These variables are for color aliases only.
+ * They ARE to be used in components.
+ * If a variable doesn't exist for a use case,
+ * alias the color definition from _colors-definitions.scss
+ *
+ * This is meant to define the colors used in general contexts.
+ *
+ * IMPORTANT:
+ * DO be general.
+ * DO NOT be specific.
+ * $color-icon--white // good
+ * $color-icon--duration // bad
  */
-.modal {
-  // ...
-}
-
-  .modal-content {
-    // ...
-  }
 
 
 
 /**
- * A modal component in it’s opened state.
+ * Texts
  */
-.modal_opened {
-  // ...
-}
+
+$color-text--black             : $black;
+$color-text--blue              : $blue;
+$color-text--white             : $white;
+// ...
+
+
+
+/**
+ * Links
+ */
+
+$color-link--blue : $blue;
+// ...
 ```
 
 
@@ -254,13 +269,23 @@ Block comments should be made for **every block**, no matter how large or small.
 <br />
 ## Selectors
 
-[TODO]
+* Use classes (not ids)
+* Use `data-ui` attributes for dynamic styles that aren't states, such as theme-ing
 
-..don't use ids
 
-..use classes
+Example:
 
-..use `data-ui` attributes for dynamic styles that aren't states, such as theme-ing
+```scss
+.profile {
+  // ...
+}
+
+
+
+.profile[data-ui-theme=blue] {
+  background: $color-background--blue;
+}
+```
 
 
 
@@ -269,7 +294,7 @@ Block comments should be made for **every block**, no matter how large or small.
 
 Be descriptive with your naming choice. Avoid unnecessary abbreviations:
 
-```javascript
+```scss
 // Bad
 .btn {}
 
