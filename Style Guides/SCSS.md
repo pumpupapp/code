@@ -53,7 +53,7 @@ Don’t nest selectors. Instead, just indent to imply a nested DOM structure:
 
 #### Whitespace
 
-Maintain at least 3 line breaks between blocks and 1 line break between a block’s “nested” elements:
+Maintain 3 line breaks between blocks and 1 line break between a block’s “nested” elements:
 
 ###### Bad
 
