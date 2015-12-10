@@ -240,6 +240,8 @@ For block comments that have 5 or fewer lines of content, do not use spacing:
  * @param  {Object}   [options={}] The options you want to use.
  * @return {Object[]} The names attached to the data because yolo.
  */
+```
+
 
 Here is a complete mock comment to exemplify all of the possible inclusions, as well as their **ordering** and **spacing**:
 
