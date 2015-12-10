@@ -228,7 +228,18 @@ x = x + 1
 
 #### Block
 
-Block comments should be made for **every function**, no matter how large or small. Use [DocBlockr](https://github.com/Warin/Sublime/tree/master/DocBlockr) to generate them.
+Block comments should be made for **every function**, no matter how large or small. Use [DocBlockr](https://github.com/Warin/Sublime/tree/master/DocBlockr) to easily generate them.
+
+For block comments that have 5 or fewer lines of content, do not use spacing:
+
+```javascript
+/**
+ * Explains how to write a short block comment.
+ * @param  {String[]} names        The names of the things.
+ * @param  {Object}   data         The data of the things.
+ * @param  {Object}   [options={}] The options you want to use.
+ * @return {Object[]} The names attached to the data because yolo.
+ */
 
 Here is a complete mock comment to exemplify all of the possible inclusions, as well as their **ordering** and **spacing**:
 
@@ -236,7 +247,7 @@ Here is a complete mock comment to exemplify all of the possible inclusions, as 
 /**
  * @deprecated because yolo
  *
- * This is my description.
+ * Explains how to write an excessively long block comment.
  *
  * TODO: make all your comments this awesome
  * FIXME: just kidding, my code is gold
