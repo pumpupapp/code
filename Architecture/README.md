@@ -64,5 +64,5 @@ But really...
   * Use PumpUp's MindManager template?
 * Present the architecture to a qualified party
   1. Make a [Pull Request](/Pull Requests/README.md) from [feature branch to project branch](/Branches/README.md)
-  * [Code Reviewer](/Code Reviews/README.md) [reviews](/Code Reviews/README.md#Reviewer-Guide) the PR
+  * Assign a qualified party
 * Implement the feature
