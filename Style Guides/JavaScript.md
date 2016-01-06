@@ -384,8 +384,8 @@ Be sure to use the right type of log for your scenario:
 ### Examples
 
 ```javascript
-console.log('User clicked save workout %o', workout)
-console.info('Workout saved %o', workout)
+console.log('Workout saved %o', workout)
+console.info('Save workout button clicked %o', workout)
 console.assert(!!workout, 'Workout does not exist')
 console.warn('Workout.saveChildren is deprecated')
 console.error('Tried saving workout that isn’t owned %o', workout)
