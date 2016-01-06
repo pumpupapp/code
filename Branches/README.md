@@ -13,7 +13,12 @@ Feature bug | Fixes a bug in a feature | Project branch ~> Project branch | `fea
 Release bug | Fixes a bug in a release | Release branch ~> Release branch | `release/RELEASE_NAME.bugfix.BUGFIX_NAME`<br />Eg. `release/v3.3.0.bugfix.workout-saving`
 Hotfix | Fixes a bug in production | `master` ~> `master` | `hotfix/HOTFIX_NAME`<br />Eg. `hotfix/workout-saves-endlessly`
 
+<br />
+### Pulling code from an upstream branch
 
+**You must NEVER (EVER-EVER) pull into a feature branch from anywhere except for it’s relevant project branch.**
+
+For example, `develop` **must not** be pulled into `feature/some-project.some-feature`. You must first pull `develop` into `feature/some-project` and then pull `feature/some-project` into `feature/some-project.some-feature`.
 
 <br />
 ### Permissions
