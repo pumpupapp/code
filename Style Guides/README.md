@@ -25,3 +25,4 @@ Use annotations whenever necessary to describe any action needed for a snippet o
 - `OPTIMIZE` : for code that is inefficient and may become a bottleneck
 - `HACK`     : for the use of a questionable (or ingenious) coding practice
 - `REVIEW`   : for code that should be reviewed to confirm implementation
+- `DEBUG`    : for code that that is for debugging purposes only (should not be active during production builds)
