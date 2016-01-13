@@ -1,5 +1,7 @@
 # Architecture
 
+![](http://www.businessballs.com/images/treeswing/tree-swing-s-hogh.jpg)
+
 What is architecture? How things work.
 
 What is the goal of architecting *before* coding?
