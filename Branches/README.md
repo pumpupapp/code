@@ -14,11 +14,64 @@ Release bug | Fixes a bug in a release | Release branch ~> Release branch | `rel
 Hotfix | Fixes a bug in production | `master` ~> `master` | `hotfix/HOTFIX_NAME`<br />Eg. `hotfix/workout-saves-endlessly`
 
 <br />
-### Pulling code from an upstream branch
+### Branching structure
+This is an example feature branching structure. It shows which branches should be merged in to which and also which branches should be used as a base branch in your [Pull Request](/Pull Requests/README.md).
 
+Example:
+* Project name = _Workout_
+* Feature name 1 = _Preview_
+* Feature name 2 = _Builder_
+* Feature name 3 = _Share_
+```
+ develop ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ◆ ~ ~ ...
+                \                                                    |\
+                 \                                                   | \
+                  \                                                  |  \
+                   \                                                 |   -- feature/...
+   feature/workout  -- ~ ~ ~ ~ ~ ~ ~ ◆ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ◆ ~ ~ ~ ~ ◆
+                      \              |\                    |\        |
+                       \             | \                   | \       |
+                        \            |  \                  |  \      |
+                         \           |   \                 |   \     |
+feature/workout.preview → • - - - - -•    \                |    \    |
+                                           \               |     \   |
+                  feature/workout.builder → • - - • - - - -•      \  |
+                                                                   \ |
+                                                                    \|
+                                            feature/workout.share →  •
+```
+- Each `•` (bullet) represents a commit on the respective branch.
+- Each `◆` (diamond) repesents a merge. Either from the feature branch to the project branch or project branch to develop.
+
+You must open a PR on your feature branch (eg. `feature/workout.preview`) against the project branch (eg. `feature/workout`). After the Code Review, the feature branch will be merged in to the project branch and eventually the project branch back in to the develop branch.
+
+<br />
+### Pulling code from an upstream branch
 **You must NEVER (EVER-EVER) pull into a feature branch from anywhere except for it’s relevant project branch.**
 
-For example, `develop` **must not** be pulled into `feature/some-project.some-feature`. You must first pull `develop` into `feature/some-project` and then pull `feature/some-project` into `feature/some-project.some-feature`.
+In the highly likely event that other developers merge code in to the `develop` branch after you create your project branch, you will need to update your project branch with the new code.
+<br />
+
+For example, `develop` **must not** be pulled into `feature/workout.preview` or `feature/workout.builder` directly. You must first pull `develop` into `feature/workout` and then pull `feature/workout` into `feature/workout.preview` or `feature/workout.builder`.
+```
+ develop ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ◆ ~ ~ ~ ~ ~ ◆ ~ ~ ~ ~ ◆ ~ ~ ~ ~ ~  ◆ ~ ~ ...
+                \               ◦                     ◦            |\
+                 \               ◦                     ◦           | \
+                  \               ◦                     ◦          |  \
+                   \               ◦                     ◦         |   -- feature/...
+  feature/workout  -- ~ ~ ~ ~ ~ ~ ~ ◆ ~ ~ ◆ ~ ~ ~ ~ ~ ~  ◆ ~ ~ ~ ~ ◆
+                      \             ◦     |\             ◦         |
+                       \            ◦     | \            ◦         |
+                        \           ◦     |  \           ◦         |
+                         \          ◦     |   \          ◦         |
+feature/workout.preview → • - - - - ◆ - - •    \         ◦         |
+                                                \        ◦         |
+                       feature/workout.builder → • - • - ◆ - - - - •
+```
+- Each `•` (bullet) represents a commit on the respective branch.
+- Each `◆` (diamond) repesents a merge. Either from the feature branch to the project branch or project branch to develop.
+- The `◦` (empty dot) represents the upstream branch pull trail
+     - First `develop` is pulled in to `feature/workout` and then in to `feature/workout.preview` and `feature/workout.builder`
 
 <br />
 ### Permissions
