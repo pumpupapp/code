@@ -965,14 +965,14 @@ describe('/WorkoutExercise', () => {
 
 
     it('...', () => {
-      
+
       let a = 1
       let b = 2
       let c = a + b
-      
+
       a.should.not.eql(b)
       c.should.eql(a + b)
-      
+
     })
 
   })
@@ -980,19 +980,56 @@ describe('/WorkoutExercise', () => {
 
 
   describe('.propTypes', () => {
-    
-    
+
+
     describe('.range', () => {
-    
+
       it('...', () => {
         // ...
       })
-    
+
     })
-    
-    
+
+
   })
-  
+
+
+})
+```
+
+
+If there are **more than 10** `it`s, they must be separated by [sectional comments](#sectional).
+```jsx
+describe('/reduxUtil', () => {
+
+
+  describe('#create', () => {
+
+
+    /////////////
+    // POINTER //
+    /////////////
+
+
+    it('creates a pointer')
+
+
+    // ...
+
+
+    ///////////
+    // MODEL //
+    ///////////
+
+
+    it('creats a model')
+
+
+    // ...
+
+
+  })
+
 
 })
 ```
