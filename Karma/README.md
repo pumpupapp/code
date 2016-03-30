@@ -8,7 +8,10 @@ We believe in karma. So much so that you can redeem karma for *real things*.
 
 ### Rules
 
-Karma points are awarded for a successful [Standup](../Standup/README.md).
+Karma points are awarded for...
+
+1. Passing your daily [Standup](../Standup/README.md)
+2. Accomplishing 50% of your [Sprint Plan](../Sprint Plan/README.md) goals
 
 ### Value
 
