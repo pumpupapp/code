@@ -38,16 +38,16 @@ Functions should always be prefixed with a *verb*. Before using a new verb, ensu
 
 Prefix    | Action    | Example   | Alternate prefixes
 :---------|:----------|:----------|:---------------------
-`convert` | changes something from one state to another | `myCar....()`
-`create` | creates something new | `let myCar = createCar('Tesla Model S')`
-`delete` | deletes something from existence | `deleteWorkout` | `destroy`
-`get` | gets something | `user.getFullName()`
-`initialize` |
-`is` | checks if something is another thing | `user.isMale()` | `has`, `will`, `did`, `can`, `should`
+`convert` | changes something from one state to another | `convertDaoToFrontendObject(dao)`
+`create` | creates something new | `createFollow(data)`
+`delete` | deletes something from existence | `deleteWorkout(workoutId)` | `destroy`
+`get` | gets something | `getUserName()`
+`initialize` | sets something to be in an initial state | `initialize()`
+`is` | checks if something is another thing | `isModel(model)` | `has`, `will`, `did`, `can`, `should`
 `load` | loads something from somewhere into another place | `loadUserCache()`
-`remove` | removes something locally but keeps in existence remotely | `destroy`
-`save` | persists something to the DB | `user.save()`
-`set` | sets a child property | `user.setFollowerCount(10)` | `increment`, `decrement`, `update`, `toggle`, `clear`, `reset`
+`remove` | removes something locally but keeps in existence remotely | `removeAttachment(attachmentType)`
+`save` | persists something to the DB | `save(path)`
+`set` | sets a child property | `setSearchText(searchText)` | `increment`, `decrement`, `update`, `toggle`, `clear`, `reset`
 
 Honorable mentions (that can also be used):
 * `bind`
