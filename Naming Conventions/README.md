@@ -62,3 +62,18 @@ Honorable mentions (that can also be used):
 
 
 \* Used for event handlers
+
+
+
+
+## Suffixes
+
+Function and variable suffixes are slightly more ambiguous, but in most cases are standardized.
+
+
+Suffix    | Description | Example
+:---------|:------------|:----------
+Entity | Name of thing being described | `Date` (`startDate`), `User` (`currentUser`), `Button` (`onClickLeftHeaderButton`), `Container`, `Util`
+Reserved | Predefined names | `CreatedAt` (`lastCreatedAt`), `Id` (`currentUserId`)
+`Count` | Number of instances of something | `unreadNotificationsCount`
+`List` | Array | `followingList`
