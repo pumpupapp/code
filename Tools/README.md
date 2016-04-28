@@ -22,6 +22,7 @@ Once you’ve set up Package Control, you may start installing plugins by hittin
 - **BufferScroll**: remembers your open files, scroll position, saved state, and more __**__
 - **Case Conversion**: allows you to convert letter-casing of the selected text
 - **[DocBlockr](https://github.com/spadgos/sublime-jsdocs)**: simplified and clean commenting
+- **[CloseOtherWindows](https://github.com/werkzeugh/CloseOtherWindows_SublimePlugin)**: closes other tabs with `Ctrl + Super + w`
 - **EditorConfig**: enables teams to share editor settings such as whitespace, etc
 - **Emmet**: simplifies writing HTML using CSS selectors
 - **GitGutter**: shows "modified" lines in the sidebar
@@ -40,6 +41,12 @@ Once you’ve set up Package Control, you may start installing plugins by hittin
 
 To install all of these plugins (and some more), use th *Sublime Packages.zip* file and merge it with `Sublime Text.app -> Show Package Contents -> Contents -> MacOS -> Packages`.
 
+- **GitHub Flavored Markdown Preview** preview markdowns in github
+
+To install Github Flavored Markdown go here: [GitHub Flavored Markdown]  (https://packagecontrol.io/packages/GitHub%20Flavored%20Markdown%20Preview)
+
+To install the package (after you've run the python script) `hit cmd + shift + p` and click `Package: Install Package` and then click `Github Flavored Markdown`.
+
 You can also spill some paint onto Sublime’s default theme. Some recommendations are:
 
 - **Predawn** ***
@@ -52,7 +59,7 @@ _\* By default, the alignment is applied only to the `=` character. However, we 
     "alignment_chars": ["=", ":"],
     "alignment_space_chars": ["=", ":"]
 }
-```     
+```
 
 _\** BufferScroll has a really annoying "feature" where multiple views of the same file have their scroll positions synced. To change this behavior, go to `Sublime Text > Preferences > Package Settings > BufferScroll > Settings - User` and add `"synch_scroll": false`._
 

@@ -6,10 +6,26 @@ It must contain:
 
 * **Subject:** Summary of proposed changes
 * **Comment:** Details of proposed changes
-* **Assignee:** Person to perform a Code Review
+* **Assignee:** Person to perform a [Code Review](Code Review)
 
 
-#### When to PR
+
+## Checklist
+
+To show that you respect your code reviewer's time, it's important that you make this process as quick and painless as possible for them. Before opening a PR, make sure you have done **all** of the following:
+
+- [x] Re-read all of your changes and make sure everything is perfect
+  - [x] Style
+  - [x] Architecture
+  - [x] Easy to read
+- [x] Test your changes and make sure they work and don't introduce bugs
+- [x] Ensure your code coverage has increased, and that any files you touched do not introduce missed lines
+- [x] Run tests locally so that they don't fail when you make the PR
+
+
+
+
+## DO open a PR
 
 A PR **must** be opened when merging the following types of branches:
 
@@ -20,7 +36,7 @@ A PR **must** be opened when merging the following types of branches:
 * hotfix branch ~> `master`
 
 
-#### When **not** to PR
+## DO NOT open a PR
 
 A PR **must not** be opened when merging the following types of branches:
 

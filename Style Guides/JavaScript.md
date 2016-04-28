@@ -19,6 +19,7 @@ A minimalist's guide to modern JavaScript.
 - [Modules](#modules)
 - [Conditionals](#conditionals)
 - [Loops](#loops)
+- [Tests](#tests)
 
 
 
@@ -227,7 +228,20 @@ x = x + 1
 
 #### Block
 
-Block comments should be made for **every function**, no matter how large or small. Use [DocBlockr](https://github.com/Warin/Sublime/tree/master/DocBlockr) to generate them.
+Block comments should be made for **every function**, no matter how large or small. Use [DocBlockr](https://github.com/Warin/Sublime/tree/master/DocBlockr) to easily generate them.
+
+For block comments that have 5 or fewer lines of content, do not use spacing:
+
+```javascript
+/**
+ * Explains how to write a short block comment.
+ * @param  {String[]} names        The names of the things.
+ * @param  {Object}   data         The data of the things.
+ * @param  {Object}   [options={}] The options you want to use.
+ * @return {Object[]} The names attached to the data because yolo.
+ */
+```
+
 
 Here is a complete mock comment to exemplify all of the possible inclusions, as well as their **ordering** and **spacing**:
 
@@ -235,10 +249,12 @@ Here is a complete mock comment to exemplify all of the possible inclusions, as 
 /**
  * @deprecated because yolo
  *
- * This is my description.
+ * Explains how to write an excessively long block comment.
  *
  * TODO: make all your comments this awesome
  * FIXME: just kidding, my code is gold
+ *
+ * @private
  *
  * @example
  *   callThisFunctionWithArgs("myString", 123, {
@@ -273,23 +289,52 @@ Here is a complete mock comment to exemplify all of the possible inclusions, as 
  * @param {Object} [obj] An optional object.
  *
  * @return {Number} Always returns 12345 because yolo.
- *
- * @private
- * @admin
  */
 ```
 
+##### Whitespace
+Leave one line break between the method's description and its parameters only if the description takes more than two lines.
 
-#### Section
+
+#### Sectional
 
 Sectional comments are used to organize code in modules into logical sections.
-
+They can be easily generated using [DocBlockr](https://github.com/Warin/Sublime/tree/master/DocBlockr).
+```javascript
+// BEST SECTION EVER[CTRL+RETURN]
+```
+becomes
 ```javascript
 ///////////////////////
 // BEST SECTION EVER //
 ///////////////////////
 ```
 
+##### Whitespace
+Leave five line breaks above a sectional comment and three line breaks after:
+```javascript
+//////////////
+// SECTION1 //
+//////////////
+
+
+
+function myFunc() {
+  // ...
+}
+
+
+
+
+
+//////////////
+// SECTION2 //
+//////////////
+
+
+
+// ...
+```
 
 
 #### Module
@@ -302,6 +347,8 @@ Module comments are used to describe the contents of a module in a simple way.
  * while drinking coffee. In here, you can find out exactly
  * what this file contains in a concise tidbit of text.
  */
+
+// Rest of file...
 ```
 
 
@@ -324,11 +371,11 @@ To aid in debugging, we add logs to our code.
 ### Types
 
 Be sure to use the right type of log for your scenario:
-* `console.log` : When a user does something
-* `console.info` : When something happens without a user doing it
+* `console.log`    : When something happens without a user doing it
+* `console.info`   : When a user does something
 * `console.assert` : When an assertion needs to be made
-* `console.warn` : When something has gone wrong
-* `console.error` : When something has gone critically wrong
+* `console.warn`   : When something has gone wrong
+* `console.error`  : When something has gone critically wrong
 
 **Do not** use these types of logs:
 * `console.debug`
@@ -337,8 +384,8 @@ Be sure to use the right type of log for your scenario:
 ### Examples
 
 ```javascript
-console.log('User clicked save workout %o', workout)
-console.info('Workout saved %o', workout)
+console.log('Workout saved %o', workout)
+console.info('Save workout button clicked %o', workout)
 console.assert(!!workout, 'Workout does not exist')
 console.warn('Workout.saveChildren is deprecated')
 console.error('Tried saving workout that isn’t owned %o', workout)
@@ -642,6 +689,7 @@ function myLogFn() {
 
 
 
+
 <br />
 ## Objects
 
@@ -741,6 +789,21 @@ export const DEFAULT_TIMEOUT = 500
 // ...rest of the file
 ```
 
+A module's imports should be grouped by remote and then local, and sorted alphabetically in each group:
+
+```javascript
+let _           = require('lodash')
+let Parse       = require('parse')
+let React       = require('react')
+
+let Icon        = require('components/icon/icon')
+let ACTIVITY    = require('constants/activity')
+let DISTANCE    = require('constants/distance')
+let INTENSITY   = require('constants/intensity')
+let ActivityLog = require('models/ActivityLog')
+let datetime    = require('utils/datetime')
+```
+
 
 <br />
 ## Conditionals
@@ -805,6 +868,75 @@ return // ...
 ```
 
 
+For conditions that require more than 1 line, use the following format:
+
+```javascript
+// Only ORs
+if (
+  condition1 ||
+  condition2 ||
+  condition3
+) {
+  // ...
+}
+
+// Only ANDs
+if (
+  condition1 &&
+  condition2 &&
+  condition3
+) {
+  // ...
+}
+
+// ORs and ANDs
+if (
+  (
+    condition1 &&
+    condition2
+  )
+  ||
+  condition3
+  ||
+  (
+    condition4
+    ||
+    (
+      condition5 &&
+      condition6
+    )
+  )
+) {
+  // ...
+}
+```
+
+Make complex conditions simpler by creating variables:
+```javascript
+let complexCondition = (
+  condition4
+  ||
+  (
+    condition5 &&
+    condition6
+  )
+)
+
+if (
+  (
+    condition1 &&
+    condition2
+  )
+  ||
+  condition3
+  ||
+  complexConditiond
+) {
+  // ...
+}
+```
+
+
 <br />
 ## Loops
 
@@ -842,7 +974,101 @@ do {
 
 
 
+<br />
+## Tests
 
+A good test ensures that a unit of code behaves as expected without caring about the implementation. For every test case, there should be 1 corresponding `it`. Inside of an `it`, there may be multiple tests for different examples of the test case.
+
+
+###### Whitespace
+
+There should be 3 spaces between adjacent `descibe`s and 2 spaces between adjacent `it`s.
+
+There should be 2 spaces before nested `describe`s and 1 space before nested `it`s.
+
+Similarly to functions, if there are more than 3 lines inside an `it`, there should be a space of padding in the function.
+```jsx
+describe('/WorkoutExercise', () => {
+
+
+  describe('::getCalories', () => {
+
+    it('...', () => {
+      let a = 1
+      let b = 2
+      a.should.not.eql(b)
+    })
+
+
+    it('...', () => {
+
+      let a = 1
+      let b = 2
+      let c = a + b
+
+      a.should.not.eql(b)
+      c.should.eql(a + b)
+
+    })
+
+  })
+
+
+
+  describe('.propTypes', () => {
+
+
+    describe('.range', () => {
+
+      it('...', () => {
+        // ...
+      })
+
+    })
+
+
+  })
+
+
+})
+```
+
+
+If there are **more than 10** `it`s, they must be separated by [sectional comments](#sectional).
+```jsx
+describe('/reduxUtil', () => {
+
+
+  describe('#create', () => {
+
+
+    /////////////
+    // POINTER //
+    /////////////
+
+
+    it('creates a pointer')
+
+
+    // ...
+
+
+    ///////////
+    // MODEL //
+    ///////////
+
+
+    it('creats a model')
+
+
+    // ...
+
+
+  })
+
+
+})
+```
 
 
 
