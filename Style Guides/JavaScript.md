@@ -486,8 +486,8 @@ var named = function named() {}
 // Function declaration
 function declaration() {}
 
-// Contextual function
-var contextual = () => {}
+// Arrow function
+var arrow = () => {}
 ```
 
 **Only use function declarations** for the sake of consistency and added benefits they come with.
@@ -511,7 +511,7 @@ module.exports = {
 function myMethod() {}
 ```
 
-The only exception is when defining a private function within another function, you can use a **contextual function**.
+The only exception is when defining a private function within another function, you can use an **arrow function**.
 
 ```javascript
 function myMethod(user) {
@@ -526,12 +526,12 @@ function myMethod(user) {
 ```
 
 
-##### Parameters
+##### Arguments
 
-If there are more than 3 parameters, it is customary to use an object which contains properties that would otherwise be their own parameters.
+If there are more than 3 arguments, it is customary to use an object which contains properties that would otherwise be their own arguments.
 
-If there are too many **required parameters**, use a `data` object.
-If there are too many **optional parameters**, use an `options` object.
+If there are too many **required arguments**, use a `data` object.
+If there are too many **optional arguments**, use an `options` object.
 
 ```javascript
 function myFunc(a, b) {
@@ -560,6 +560,42 @@ function searchWorkouts(options) {
 function saveDataForNextView(data) {
   console.log('Saving data for next view: %o', data)
   this._savedData = data
+}
+```
+
+
+##### Arguments of arrow functions
+
+The arguments of arrow functions should **always** be wrapped in parentheses, **except** when there aren't multiple lines in the body and only one argument:
+
+```javascript
+// Bad
+var singleLine = (one) => one.map(two)
+
+var multipleLineReturn = (options) => ({
+  ...options,
+  something: true,
+})
+
+var multipleLineBody = data => {
+  var newData = data.map(newness)
+  // ...
+  return newData
+}
+
+
+// Good
+var singleLine = one => one.map(two)
+
+var multipleLineReturn = options => ({
+  ...options,
+  something: true,
+})
+
+var multipleLineBody = (data) => {
+  var newData = data.map(newness)
+  // ...
+  return newData
 }
 ```
 
