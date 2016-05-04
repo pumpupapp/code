@@ -38,30 +38,17 @@ Functions should always be prefixed with a *verb*. Before using a new verb, ensu
 
 Prefix    | Action    | Example   | Alternate prefixes
 :---------|:----------|:----------|:---------------------
-`convert` | changes something from one state to another | `convertDaoToFrontendObject(dao)`
+`bind` | does something when another thing happens | `bindOnOpenKeyboard(this.onKeyboardOpen)` | `on`
+`convert` | changes something from one state to another | `convertDaoToFrontendObject(dao)` | `compress`, `normalize`, `parse`
 `create` | creates something new | `createFollow(data)`
 `delete` | deletes something from existence | `deleteWorkout(workoutId)` | `destroy`
-`get` | gets something | `getUserName()`
+`get` | gets something from another thing | `getUserName()` | `find`, `filter`, `copy`, `validate`, `match`
 `initialize` | sets something to be in an initial state | `initialize()`
 `is` | checks if something is another thing | `isModel(model)` | `has`, `will`, `did`, `can`, `should`
-`load` | loads something from somewhere into another place | `loadUserCache()`
+`load` | loads something from one place into another | `loadUserCache()` | `read`
 `remove` | removes something locally but keeps in existence remotely | `removeAttachment(attachmentType)`
-`save` | persists something to the DB | `save(path)`
-`set` | sets a child property | `setSearchText(searchText)` | `increment`, `decrement`, `update`, `toggle`, `clear`, `reset`
-
-Honorable mentions (that can also be used):
-* `bind`
-* `copy`
-* `filter`
-* `find`
-* `merge`
-* `on`*
-* `parse`
-* `validate`
-* Any special terminology, including (but not limited to) `compress`, `hellban`, `mark`, `match`, `normalize`, `read`, `send`, etc.
-
-
-\* Used for event handlers
+`save` | persists something to another thing | `save(path)` | `send`, `cache`
+`set` | sets a child property | `setSearchText(searchText)` | `increment`, `decrement`, `update`, `toggle`, `clear`, `reset`, `sanitize`, `merge`, `mark`, `hellban`
 
 
 
@@ -71,9 +58,9 @@ Honorable mentions (that can also be used):
 Function and variable suffixes are slightly more ambiguous, but in most cases are standardized.
 
 
-Suffix    | Description | Example
-:---------|:------------|:----------
+Suffix    | Description | Example   | Replaced prefixes/suffixes
+:---------|:------------|:----------|:---------------------------
 Entity | Name of thing being described | `Date` (`startDate`), `User` (`currentUser`), `Button` (`onClickLeftHeaderButton`), `Container`, `Util`
 Reserved | Predefined names | `CreatedAt` (`lastCreatedAt`), `Id` (`currentUserId`)
-`Count` | Number of instances of something | `unreadNotificationsCount`
+`Count` | Number of instances of something | `unreadNotificationsCount` | `num`, `number`
 `List` | Array | `followingList`
