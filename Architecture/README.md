@@ -55,7 +55,8 @@ But really...
 ## Process
 
 1. Draft the architecture for the feature
-  1. Create a new file, `architecture/FEATURE_NAME.md`
+  1. Create a new architecture file, `architecture/FEATURE_NAME.md`
+    * Use [the template](Template.md)
     * Example: `architecture/GPS.md`
   * Describe feature goal
   * List sub-features
