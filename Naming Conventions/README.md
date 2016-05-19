@@ -48,7 +48,7 @@ Prefix    | Action    | Example   | Alternate prefixes
 `load` | loads something from one place into another | `loadUserCache()` | `read`
 `remove` | removes something locally but keeps in existence remotely | `removeAttachment(attachmentType)`
 `save` | persists something to another thing | `save(path)` | `send`, `cache`
-`set` | sets a child property | `setSearchText(searchText)` | `increment`, `decrement`, `update`, `toggle`, `clear`, `reset`, `sanitize`, `merge`, `mark`, `hellban`
+`set` | sets a child property | `setSearchText(searchText)` | `increment`, `decrement`, `update`, `toggle`, `clear`, `reset`, `sanitize`, `merge`, `mark`, `hellban`, `consume`
 
 
 
