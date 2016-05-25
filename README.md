@@ -1,16 +1,27 @@
 # Legend
 
-1. [Introduction](#Introduction)
-* [Standup](Standup)
-* [Naming Conventions](Naming Conventions)
-* [Style Guides](Style Guides)
-* [Pivotal Tracker](Pivotal Tracker)
-* [Branches](Branches)
-* [Commits](Commits)
-* [Pull Requests](Pull Requests)
-* [Code Reviews](Code Reviews)
-* [Testing](Testing)
-* [Tools](Tools)
+1. [Introduction](#introduction)
+* Routines
+  * [Standup](Standup)
+  * [Sprint Plan](Sprint Plan)
+  * [Cleanup Hour](Cleanup Hour)
+  * [Bug Smash Sesh](Bug Smash Sesh)
+  * [Lunch n' Learn](Lunch n' Learn)
+* Processes
+  * [Architecture](Architecture)
+  * [Pivotal Tracker](Pivotal Tracker)
+  * [Pull Requests](Pull Requests)
+  * [Code Reviews](Code Reviews)
+  * [Release](Release)
+* Coding Practices
+  * [Naming Conventions](Naming Conventions)
+  * [Style Guides](Style Guides)
+  * [Branches](Branches)
+  * [Commits](Commits)
+  * [Testing](Testing)
+* Other
+  * [Karma](Karma)
+  * [Tools](Tools)
 
 <br />
 
