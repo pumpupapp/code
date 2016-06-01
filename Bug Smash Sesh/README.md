@@ -19,8 +19,9 @@
 
 1. Identify a pool of bugs that have yet to be fixed
   * Prune any obselete bugs
+  * Find new bugs from error logs
 * Prioritize the bugs by severity and estimate the time required to fix them
-* Pick enough bugs to fill *at least* 1 hour
+* Pick enough bugs to fill 1 hour
 * Post your bug(s) in **#dev_bugsmashsesh**
   * Include pivotal story links
   * Eg.
