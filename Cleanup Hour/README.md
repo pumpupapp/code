@@ -18,6 +18,7 @@ For one hour each week, we perform cleanup. This helps ensure we maintain top-qu
 * Post your cleanup goal in **#dev_cleanup**
   * Avoid conflicts by notifying relevant team members of the files you're cleaning
 * Clean
+  * Add tests
   * Fix styling
   * Add documentation
   * Simplify implementation
