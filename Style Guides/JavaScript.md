@@ -683,6 +683,20 @@ function myLogFn() {
 }
 ```
 
+Whitespace **around function parameters** should look like this:
+
+```javascript
+var results = yield db.models.Comment.getForPosts(
+  [
+    posts[0].id,
+    posts[1].id,
+  ],
+  {
+    userId: users[0].id,
+  }
+)
+```
+
 
 **Note:** All of these rules are recursive, meaning if there is a function within a function, the same rules apply to that function.
 
