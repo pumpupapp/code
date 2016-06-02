@@ -21,7 +21,7 @@ A CR is a review of the proposed changes in a [PR](/Pull Requests/README.md).
   * *Optional:* **Reviewer** shoots **Developer** with a Nerf™ gun.
 * If there are any comments, **Developer** responds to each comment with either a follow-up comment or a code change. Once another review is ready, go back to (1).
 * **Reviewer** may request a demo of the proposed changes. If any bugs are found, **Developer** must fix fix them and demo again.
-* **Reviewer** merges the PR and deletes the branch.
+* **Reviewer** merges the PR and deletes the branch or says "LGTM" (lets get the money) and leaves it to the the **Developer** to merge after finishing outstanding issues.
 
 
 ## Reviewer Guide
