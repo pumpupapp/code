@@ -8,6 +8,7 @@
 
 
 # Metrics 📈
-- [New actions]
-- [Existing actions]
-- [Line changes]
+
+* New actions
+* Existing actions
+* Line changes
