@@ -4,24 +4,10 @@ A development tracking tool.
 
 The tracking tools provided are:
 
-- Epics: A tracker for each project.
-- Stories: A tracker for issues to tackle in a project.
-- Tasks: A tracker for tasks to accomplish to finish a story.
-
-
-## Epics
-
-An epic contains all stories that relate to a specific project.
-
-#### Guidelines
-
-* Be as specific as possible
-  * Eg. If you found a bug with creating a workout, use the **custom workouts** epic instead of the **mobile** epic
-* If there is no relevant epic or you are unsure, use the **support** epic
-* Add multiple epics, if possible
-  * Eg. The following can be tagged with **mobile** and **custom workouts**:
-
-    > Others' workout titles are editable when you click them from the feed
+- [Tasks](#tasks): Tasks pertaining a story (eg. `Implement click handler`).
+- [Stories](#stories): Things to complete for an epic (eg. `Add signup button`).
+- [Epics](#epics): Ongoing sub-projects (eg. `support`, `workouts`, `notifications`).
+- Projects: Large projects (eg. `mobile`, `api`)
 
 
 
@@ -59,7 +45,7 @@ A report of broken functionality.
 
 Write steps on how to reproduce in the description and, if helpful, attach screenshots.
 
-(See [Feature](#Feature))
+(See [Feature](#feature))
 
 
 ##### Release
@@ -100,9 +86,9 @@ Specific details of the story.
 <br />
 #### Labels
 
-Quick tags to allow categorization and searching of stories.
+Tags to allow organization and searching of stories.
 
-* *Epic
+* *[Epics](#epics)
 * OS eg. **ios**
 * Device eg. **iphone 6+**
 * **regression** if it's something that used to work
@@ -120,3 +106,21 @@ Quick tags to allow categorization and searching of stories.
 #### Tasks
 
 A breakdown of a story into smaller actionable tasks that will collectively complete the story. Once all tasks are complete, the story should be marked as **Finished**.
+
+
+
+
+<br />
+## Epics
+
+An epic contains all stories that relate to a specific project.
+
+#### Guidelines
+
+* Be as specific as possible
+  * Eg. If you found a bug with creating a workout, use the **workouts** epic instead of the **mobile** epic
+* If there is no relevant epic or you are unsure, use the **support** epic
+* Add multiple epics, if possible
+  * Eg. The following can be tagged with **mobile** and **workouts**:
+
+    > Others' workout titles are editable when you click them from the feed
