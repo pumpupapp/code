@@ -1,14 +1,26 @@
 # Features 🌟
 
 
+
+
 # Tweaks ⭐
+
+
 
 
 # Bugfixes 🐛
 
 
+
+
 # Metrics 📈
 
-* New actions
-* Existing actions
+* Actions
+  * Added
+  * Changed
+  * Removed
+* Expectations
+  * More
+  * Less
 * Line changes
+* Test coverage
