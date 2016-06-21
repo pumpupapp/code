@@ -323,6 +323,34 @@ describe('<Modal />', () => {
 
 
 <br />
+### Testing Failure
+
+- When testing when a unit is supposed to fail, use a variable in the catch statement.
+
+```jsx
+it('throws an error if a schema’s model has no classname', () => {
+
+  let isCaught = false
+  try {
+    reduxUtil.define('Test', {
+      schema: {
+        model: { type: STORE.DATA_TYPE.MODEL },
+      }
+    })
+  }
+  catch (err) {
+    err.message.should.match(/must have classname/)
+    isCaught = true
+  }
+
+  isCaught.should.eql(true)
+
+})
+```
+
+
+
+<br />
 ### Defining unit functionality
 
 - Tests should always begin with the action e.g `returns`, `gets`, `saves`, `throws` etc.
