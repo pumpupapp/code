@@ -8,7 +8,7 @@ Type | Purpose | Pull ~> Push | Naming Convention
 `develop` | Latest stable code in development | `master` & release | `develop`
 Release | Snapshot of `develop` to be used for a release | `develop` ~> `master` | `release/RELEASE_NAME`<br />Eg. `release/v3.3.0`
 Feature | Congolomeration of a set of related subfeatures and bugfixes to be released together | `develop` ~> `develop` | `feature/FEATURE_NAME`<br />Eg. `feature/custom-workout`
-Subfeature | Part of a feature | feature ~> feature | `feature/FEATURE_NAME.FEATURE_NAME`<br />Eg. `feature/custom-workout.search-filters`
+Subfeature | Part of a feature | feature ~> feature | `feature/FEATURE_NAME.SUBFEATURE_NAME`<br />Eg. `feature/workouts.search-filters`
 Hotfix | Fix for a bug existing in production | `master` ~> `master` | `hotfix/HOTFIX_NAME`<br />Eg. `hotfix/workout-saves-endlessly`
 Bugfix | Fix for a bug existing in `develop` | `develop` ~> `develop` | `bugfix/BUGFIX_NAME`<br />Eg. `bugfix/search-following-users`
 Release Bugfix | Fix for a bug in a release *before* the release is published | release ~> release | `release/RELEASE_NAME.bugfix.BUGFIX_NAME`<br />Eg. `release/v3.3.0.bugfix.workout-saving`
