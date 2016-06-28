@@ -38,7 +38,44 @@ Keep code lines < 80 characters per line. If you're going over, that means it's 
 
 #### Whitespace
 
-Maintain at least 2 line breaks between your top-level functions and at least 1 line break between bodies of functions where it helps readability:
+Maintain **3 line breaks** between blocks:
+
+###### Bad
+
+```javascript
+function getSomeAmazingThings() {
+  // ...
+}
+
+/**
+  This does some amazing things
+ */
+function doSomeOtherAmazingThing() {
+  // ...
+}
+```
+
+###### Good
+
+```javascript
+/**
+ * Does something amazing.
+ */
+function getSomeAmazingThings() {
+  // ...
+}
+
+
+
+/**
+ * This does some amazing things.
+ */
+function doSomeOtherAmazingThing() {
+  // ...
+}
+```
+
+Maintain **1 line break** between groups of statements to improve readability:
 
 ###### Bad
 
@@ -49,16 +86,6 @@ function someEpicMethod() {
   values = values.map(doSomeOtherAmazingThing)
   values = values.map(doOneMoreOtherAmazingThing)
   return values
-}
-function getSomeAmazingThings() {
-  // ...
-}
-
-/**
-  This does some amazing things
- */
-function doSomeOtherAmazingThing() {
-  // ...
 }
 ```
 
@@ -76,20 +103,55 @@ function someEpicMethod() {
   return values
 
 }
+```
 
+Maintain **1 line break** to show a close relation to an adjacent block:
 
-function getSomeAmazingThings() {
-  // ...
-}
+###### Bad
+
+```jsx
+/**
+ * The class name.
+ * @type {String}
+ */
+const CLASS_NAME = 'Message'
+
+/**
+ * The minimum number of characters allowed in a Message text.
+ * @type {Number}
+ */
+const TEXT_MIN_LENGTH = 1
+/**
+ * The maximum number of characters allowed in a Message text.
+ * @type {Number}
+ */
+const TEXT_MAX_LENGTH = 1000
+```
+
+###### Good
+
+```jsx
+/**
+ * The class name.
+ * @type {String}
+ */
+const CLASS_NAME = 'Message'
+
 
 
 /**
- * This does some amazing things
+ * The minimum number of characters allowed in a Message text.
+ * @type {Number}
  */
-function doSomeOtherAmazingThing() {
-  // ...
-}
+const TEXT_MIN_LENGTH = 1
+
+/**
+ * The maximum number of characters allowed in a Message text.
+ * @type {Number}
+ */
+const TEXT_MAX_LENGTH = 1000
 ```
+
 
 #### Alignment
 
@@ -289,6 +351,8 @@ Here is a complete mock comment to exemplify all of the possible inclusions, as 
  * @param {Object} [obj] An optional object.
  *
  * @return {Number} Always returns 12345 because yolo.
+ *
+ * @throws {Error} If the function is feeling funky.
  */
 ```
 
