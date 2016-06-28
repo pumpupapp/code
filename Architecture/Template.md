@@ -1,6 +1,7 @@
 # [Feature Title]
 
 
+
 ## Description
 
 This is the general "what?" of the feature. What is your feature? Why is it important? Keep it brief and to-the-point.
@@ -11,6 +12,11 @@ This is the general "what?" of the feature. What is your feature? Why is it impo
 
 **Actual Completion Date   : [TBD]**
 
+
+
+## Post-Mortem
+
+[TBD]
 
 
 
@@ -25,16 +31,21 @@ This is the general "what?" of the feature. What is your feature? Why is it impo
 
 ## Metrics
 
-* The "how much?" of this feature
-* New actions:
-  * Every action name
-  * Eg. `User Followed`
-* Existing actions:
-  * Every modified action being logged
-  * Eg. `Signup` segmented by `email` and `facebook`, removing `Facebook Signup`
-* Expectations:
-  * Metrics you expect to see change as a result of releasing this feature
-  * Eg. 90% walkthrough completion rate, 2x follows
+* Actions
+  * Added
+    * Every new action name
+    * Eg. `CONVERSATION_OPENED { isRead }`
+  * Changed
+    * How every changed action was modified
+    * Eg. `SIGNUP` segmented by `{ type: 'email'|'facebook' }`
+  * Removed
+    * Every removed action name
+    * Eg. `FACEBOOK_SIGNUP`
+* Expectations
+  * More
+    * Actions you expect to see more of
+  * Less
+    * Actions you expect to see less of
 
 
 
@@ -59,6 +70,7 @@ This is the general "what?" of the feature. What is your feature? Why is it impo
 * [ ] These checkboxes are then checked off as you implement the feature
   * [ ] The feature is complete once all checkboxes are checked, meaning *nothing* should be missing from this list
 * [ ] Once your architecture is merged, these must be moved to stories in Pivotal Tracker
+* [ ] Eg. `<ConversationsContainer>`: A container that will act as the root for the new `<Stack>`, left of `<NotificationsContainer>`
 
 
 
