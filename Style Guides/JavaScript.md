@@ -268,7 +268,7 @@ Inline comments should only be inside of function bodies.
 
 * Non-trivial snippets (eg. bit shifting, formulas)
 * Unintuitive logic (eg. workarounds)
-* Line-specific annotations (eg. `// TODO: change to validate once issue at http://example.com is fixed`)
+* Line-specific annotations (eg. `// TODO: Change to validate once issue at http://example.com is fixed`)
 
 
 
@@ -311,8 +311,8 @@ Here is a complete mock comment to exemplify all of the possible inclusions, as 
  *
  * Explains how to write an excessively long block comment.
  *
- * TODO: make all your comments this awesome
- * FIXME: just kidding, my code is gold
+ * TODO: Make all your comments this awesome
+ * FIXME: Just kidding, my code is gold
  *
  * @private
  *
