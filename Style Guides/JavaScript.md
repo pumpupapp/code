@@ -292,15 +292,13 @@ x = x + 1
 
 Block comments should be made for **every function**, no matter how large or small. Use [DocBlockr](https://github.com/Warin/Sublime/tree/master/DocBlockr) to easily generate them.
 
-For block comments that have 5 or fewer lines of content, do not use spacing:
+For block comments that have 3 or fewer lines of content, do not use spacing:
 
 ```javascript
 /**
  * Explains how to write a short block comment.
- * @param  {String[]} names        The names of the things.
- * @param  {Object}   data         The data of the things.
- * @param  {Object}   [options={}] The options you want to use.
- * @return {Object[]} The names attached to the data because yolo.
+ * @param  {String[]} names The names of the things.
+ * @return {Object[]} The names backwards because yolo.
  */
 ```
 
