@@ -15,7 +15,9 @@ Karma points are awarded for...
 
 ### Value
 
-*20 Karma Points* = *1 Karma Star* = *$10* towards an office purchase (send filled purchase form to Office Admin)
+**20 Karma Points** = **1 Karma Star** for you + **1 Karma Star to award to someone else**
+
+**1 Karma Star** = **$10** towards an office purchase
 
 *10 Karma Stars* = A team outing of your choice (within reason)
 
@@ -26,7 +28,6 @@ Karma points are awarded for...
 
 ### Rules
 
-1. Karma Stars can never be awarded to yourself.
-* Upon being rewarded a Karma Star, it must be added to the Karma Board in the office, as well as shared in the #karma Slack channel.
-  * Eg. `I would like to award my Karma Star to @amsul for being extremely helpful.`
-* Whoever awards a Karma Star must to differentiate their star's design from all others.
+1. You must log your **Karma Star** in the #karma Slack channel within 1 day of it being earned
+  * Eg. "+1 to me and +1 to @amsul"
+* **Karma Stars** can be pooled together with others’ consent
