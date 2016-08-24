@@ -748,14 +748,28 @@ function myLogFn() {
 Whitespace **around function parameters** should look like this:
 
 ```javascript
-var results = yield db.models.Comment.getForPosts(
-  [
-    posts[0].id,
-    posts[1].id,
-  ],
+// For parameters that fit a single line
+let result = mySimpleFn(param1, param2, param3)
+
+// For parameters that end with an object
+let updatedSettings = reduxUtil.updateData(settings, {
+  audioCues: true
+})
+
+// For parameters that don’t fit a single line
+let updatedSettings = reduxUtil.updateData(
+  currentUser.data.settings,
   {
-    userId: users[0].id,
-  }
+    walkthrough : {
+      ...currentUser.data.settings.data.walkthrough,
+      overlay : {
+        ...currentUser.data.settings.data.walkthrough.overlay,
+        isLoaded : false,
+      },
+    }
+  },
+  { isLocal : true } // For small objects, inline is fine
+)
 )
 ```
 
