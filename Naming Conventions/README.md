@@ -44,7 +44,7 @@ Prefix    | Action    | Example   | Alternate prefixes
 `delete` | deletes something from existence | `deleteWorkout(workoutId)` | `destroy`
 `get` | gets something from another thing | `getUserName()` | `find`, `filter`, `copy`, `validate`, `match`
 `initialize` | sets something to be in an initial state | `initialize()`
-`is` | checks if something is another thing | `isModel(model)` | `has`, `will`, `did`, `can`, `should`
+`is` | checks if something is another thing | `isModel(model)` | `are`, `can`, `did`, `has`, `should`, `will`
 `load` | loads something from one place into another | `loadUserCache()` | `read`
 `remove` | removes something locally but keeps in existence remotely | `removeAttachment(attachmentType)`
 `save` | persists something to another thing | `save(path)` | `send`, `cache`
