@@ -1,6 +1,6 @@
 # Cleanup Hour
 
-For one hour each week, we perform cleanup. This helps ensure we maintain top-quality code and mental sanity.
+For up to one hour every so often (bi-weekly at the time of writing this), we perform cleanup. This helps ensure we maintain top-quality code and mental sanity.
 
 
 
