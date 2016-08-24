@@ -7,6 +7,12 @@
 
 
 
+## Motivation
+
+* Fixing the bug(s) you post earns you [1 Karma Point](../Karma/README.md)
+
+
+
 ## Prerequisites
 
 * Must not be already working on an existing bug
