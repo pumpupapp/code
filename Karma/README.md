@@ -19,7 +19,7 @@ Karma points are awarded for...
 
 **1 Karma Star** = **$10** towards an office purchase
 
-*10 Karma Stars* = A team outing of your choice (within reason)
+**10 Karma Stars** = **A team outing** of your choice (within reason)
 
 
 
