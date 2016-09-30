@@ -58,14 +58,12 @@ But really...
   1. Create a new architecture file, `architecture/FEATURE_NAME.md`
     * Use [the template](Template.md)
     * Example: `architecture/GPS.md`
-  * Describe feature goal
-  * List sub-features
-  * Outline files
-    * Function signatures
-    * Data formats
-    * Flow
-  * Use PumpUp's MindManager template?
+  * Be sure to describe, in as much detail, every section of the template
+  * Commit your architecture every day or two
 * Present the architecture to a qualified party
   1. Make a [Pull Request](/Pull Requests/README.md) from [feature branch to project branch](/Branches/README.md)
   * Assign a qualified party
 * Implement the feature
+  * Update the architecture as you go, especially the *R&D* section
+* Update the architecture upon completing your feature
+  * Completion date, post-mortem, R&D, etc.

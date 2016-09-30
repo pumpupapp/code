@@ -87,7 +87,10 @@ This is the general "what?" of the feature. What is your feature? Why is it impo
 ## R&D
 
 * Describe results you obtained through research and development
-* Reveal any unknowns regarding the feature's feasibility
+  * What frameworks did you try? Why?
+  * What information did you gather? StackOverflow answers, videos, GitHub comments, etc.
+  * What assumptions did you make? How did they change? Why?
+  * What had to be reverted? Why?
 
 
 
