@@ -1,6 +1,30 @@
 # Standup
 
-Every day, each developer must post in the **#dev_standups** channel with the following:
+## Description
+
+A **Standup** is a summary of what you did the previous work day and what you will do during the current work day.
+
+
+## Benefits
+
+* Optimize communication of your daily plan
+  * Coworkers can chime in if they think your standup requires changes
+* Set goals for yourself every day
+* Track your work progress
+  * Use for summarizing your week in [Sprint Plans](../Sprint Plan/README.md)
+
+
+
+## Requirements
+
+* Must be posted every work day
+* Must be posted in **#dev_standups**
+* Must be posted within 15 minutes of starting work on your computer
+
+
+
+## Format
+
 * **Yesterday <#>P|F**
   * Describe what you did the previous day
     * Clear and concise, yet thorough
