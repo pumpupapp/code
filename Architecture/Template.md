@@ -50,6 +50,18 @@ This is the general "what?" of the feature. What is your feature? Why is it impo
 
 
 
+## R&D
+
+* Ask every question that you can think of regarding this feature and the challenges involved in implementing it
+* Describe results you obtained through research and development
+  * What frameworks did you try? Why?
+  * What information did you gather? StackOverflow answers, videos, GitHub comments, etc.
+  * What assumptions did you make? How did they change? Why?
+  * What had to be reverted? Why?
+
+
+
+
 ## Flow
 
 1. This is the "when?" and "where?" of this feature
@@ -80,17 +92,6 @@ This is the general "what?" of the feature. What is your feature? Why is it impo
 * How will the current architecture be modified to migrate to this new architecture?
 * What files will be removed?
 * What functions will be deprecated?
-
-
-
-
-## R&D
-
-* Describe results you obtained through research and development
-  * What frameworks did you try? Why?
-  * What information did you gather? StackOverflow answers, videos, GitHub comments, etc.
-  * What assumptions did you make? How did they change? Why?
-  * What had to be reverted? Why?
 
 
 
