@@ -20,6 +20,7 @@ A minimalist's guide to modern JavaScript.
 - [Conditionals](#conditionals)
 - [Loops](#loops)
 - [Tests](#tests)
+- [Linting](#linting)
 
 
 
@@ -1072,7 +1073,7 @@ A good test ensures that a unit of code behaves as expected without caring about
 
 ###### Whitespace
 
-There should be 3 spaces between adjacent `descibe`s and 2 spaces between adjacent `it`s.
+There should be 3 spaces between adjacent `describe`s and 2 spaces between adjacent `it`s.
 
 There should be 2 spaces before nested `describe`s and 1 space before nested `it`s.
 
@@ -1163,6 +1164,175 @@ describe('/reduxUtil', () => {
 
 
 
+<br />
+## Linting
+
+The following `.eslintrc` files are used to lint our JavaScript (based on context):
 
 
-<br><br><br><br><br><br>
+#### Frontend
+
+```json
+{
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "ecmaFeatures": {
+      "jsx"           : true,
+      "spread"        : true,
+      "destructuring" : true,
+    }
+  },
+  "extends": ["eslint:recommended", "plugin:react/recommended"],
+  "rules": {
+    "comma-dangle"            : [0, "always-multiline"],
+    "complexity"              : [1, 6],
+    "curly"                   : [2, "all"],
+    "default-case"            : [2],
+    "dot-notation"            : [1],
+    "dot-location"            : [1, "property"],
+    "eqeqeq"                  : [2, "allow-null"],
+    "guard-for-in"            : [2],
+    "indent"                  : [2, 2],
+    "quotes"                  : [2, "single"],
+    "linebreak-style"         : [2, "unix"],
+    "max-depth"               : [1, 3],
+    "max-len"                 : [1, 120],
+    "max-params"              : [0, 4],
+    "max-statements"          : [1, 20],
+    "no-alert"                : [2],
+    "no-caller"               : [2],
+    "no-console"              : [0],
+    "no-else-return"          : [1],
+    "no-extend-native"        : [2],
+    "no-eval"                 : [2],
+    "no-floating-decimal"     : [2],
+    "no-implied-eval"         : [2],
+    "no-invalid-this"         : [2],
+    "no-loop-func"            : [1],
+    "no-multi-str"            : [2],
+    "no-native-reassign"      : [2],
+    "no-new-func"             : [2],
+    "no-new-wrappers"         : [2],
+    "no-proto"                : [2],
+    "no-regex-spaces"         : 1,
+    "no-return-assign"        : [2, "except-parens"],
+    "no-script-url"           : [2],
+    "no-self-compare"         : [2],
+    "no-sequences"            : [2],
+    "no-unexpected-multiline" : [2],
+    "no-unused-expressions"   : [2],
+    "no-unused-vars"          : [2, {"args": "none"}],
+    "no-useless-call"         : [2],
+    "no-var"                  : [2],
+    "no-with"                 : [2],
+    "radix"                   : [2],
+    "react/jsx-uses-vars"     : 1,
+    "semi"                    : [2, "never"],
+    "valid-jsdoc": [1, {
+      "prefer": {
+        "returns": "return"
+      },
+      "requireParamDescription"  : false,
+      "requireReturn"            : false,
+      "requireReturnDescription" : false
+    }]
+  },
+  "env": {
+    "es6"     : true,
+    "browser" : true,
+    "mocha"   : true,
+    "node"    : true
+  },
+  "ecmaFeatures": {
+    "jsx"                          : true,
+    "experimentalObjectRestSpread" : true
+  },
+  "plugins": [
+    "react"
+  ]
+}
+```
+
+
+#### Backend
+
+```json
+{
+  "extends": "eslint:recommended",
+  "rules": {
+    "comma-dangle"            : [0, "always-multiline"],
+    "complexity"              : [1, 7],
+    "curly"                   : [2, "all"],
+    "default-case"            : [2],
+    "dot-notation"            : [1],
+    "dot-location"            : [1, "property"],
+    "eqeqeq"                  : [2, "allow-null"],
+    "generator-star-spacing"  : [2, {"before": false, "after": true}],
+    "guard-for-in"            : [2],
+    "indent"                  : [2, 2],
+    "quotes"                  : [2, "single"],
+    "linebreak-style"         : [2, "unix"],
+    "max-depth"               : [1, 3],
+    "max-len"                 : [1, 120],
+    "max-params"              : [1, 4],
+    "max-statements"          : [1, 20],
+    "no-alert"                : [2],
+    "no-caller"               : [2],
+    "no-console"              : [0],
+    "no-else-return"          : [1],
+    "no-extend-native"        : [2],
+    "no-eval"                 : [2],
+    "no-floating-decimal"     : [2],
+    "no-implied-eval"         : [2],
+    "no-invalid-this"         : [2],
+    "no-loop-func"            : [1],
+    "no-multi-str"            : [2],
+    "no-native-reassign"      : [2],
+    "no-new-func"             : [2],
+    "no-new-wrappers"         : [2],
+    "no-proto"                : [2],
+    "no-return-assign"        : [2, "except-parens"],
+    "no-script-url"           : [2],
+    "no-self-compare"         : [2],
+    "no-sequences"            : [2],
+    "no-unexpected-multiline" : [2],
+    "no-unused-expressions"   : [2],
+    "no-unused-vars"          : [2, {"args": "none"}],
+    "no-useless-call"         : [2],
+    "no-with"                 : [2],
+    "radix"                   : [2],
+    "semi"                    : [2, "never"],
+    "valid-jsdoc": [1, {
+      "prefer": {
+        "returns": "return"
+      },
+      "requireParamDescription"  : false,
+      "requireReturn"            : false,
+      "requireReturnDescription" : false
+    }]
+  },
+  "env": {
+    "es6"  : true,
+    "node" : true
+  },
+  "globals": {
+    "DEBUGGING"   : true,
+    "DEVELOPMENT" : true,
+    "PRODUCTION"  : true,
+    "readRoot"    : true,
+    "REDIS"       : true,
+    "requireRoot" : true,
+    "STAGING"     : true,
+    "TESTING"     : true,
+    "UPLOAD"      : true,
+  }
+}
+```
+
+
+
+
+
+
+<br /><br /><br /><br /><br /><br />
