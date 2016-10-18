@@ -1,26 +1,28 @@
 # Legend
 
-1. [Introduction](#introduction)
+1. General
+  1. [Introduction](#introduction)
+  * [Mission, Vision, & Values](Mission,%20Vision,%20&%20Values)
 * Routines
-  * [Standup](Standup)
+  1. [Standup](Standup)
   * [Sprint Plan](Sprint Plan)
   * [Cleanup Hour](Cleanup Hour)
   * [Bug Smash Sesh](Bug Smash Sesh)
   * [Lunch n' Learn](Lunch n' Learn)
 * Processes
-  * [Architecture](Architecture)
+  1. [Architecture](Architecture)
   * [Pivotal Tracker](Pivotal Tracker)
   * [Pull Requests](Pull Requests)
   * [Code Reviews](Code Reviews)
   * [Release](Release)
 * Coding Practices
-  * [Naming Conventions](Naming Conventions)
+  1. [Naming Conventions](Naming Conventions)
   * [Style Guides](Style Guides)
   * [Branches](Branches)
   * [Commits](Commits)
   * [Testing](Testing)
 * Other
-  * [Karma](Karma)
+  1. [Karma](Karma)
   * [Tools](Tools)
 
 <br />
