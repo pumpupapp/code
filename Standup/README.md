@@ -45,9 +45,12 @@ A **Standup** is a summary of what you did the previous work day and what you wi
   * Set your goals for the day
     * Maximum of 3 bullets
     * Don’t overestimate
+  * Don't be afraid to make some optional
+    * Eg. *Optional:* Finish parsing the push payload
   * Example:
     * **Today**
-      * Finish writing Standup Process
+      * Finish writing Standup process
+      * *Optional:* Push the new Standup process
 * **Interesting** *(optional)*
   * Something interesting that you came across recently
   * Example:
