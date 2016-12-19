@@ -23,8 +23,8 @@
 
 ## Steps
 
-1. Identify a pool of bugs that have yet to be fixed
-  * Prune any obselete bugs
+1. Identify a pool of bugs that have yet to be fixed (search for `type:bug` in Pivotal)
+  * Prune any obsolete bugs
   * Find new bugs from error logs
 * Prioritize the bugs by severity and estimate the time required to fix them
 * Pick enough bugs to fill 1 hour
