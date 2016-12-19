@@ -102,9 +102,9 @@ This is the general "what?" of the feature. What is your feature? Why is it impo
 ### [API Section 1 (Eg. Public, Private, Store)]
 
 Provide the appropriate constants/variables/functions/etc. and their locations.
+```js
 *NOTE:* Be sure to alphabetize your api sections.
 
-```jsx
 /**
  * Fully document everything. This code is copy-pasteable for when
  * you begin the implementation phase.
@@ -114,8 +114,8 @@ function yoMama() {}
 ```
 
 
+```js
 ### [API Section 2]
 
-```jsx
 // ...
 ```
