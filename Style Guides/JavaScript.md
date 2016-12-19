@@ -11,9 +11,10 @@ A minimalist's guide to modern JavaScript.
 - [Semicolons](#semicolons)
 - [Comments](#comments)
 - [Logs](#logs)
-- [Naming conventions](#naming-conventions)
+- [Naming Conventions](#naming-conventions)
 - [Variables](#variables)
 - [Functions](#functions)
+- [Strings](#strings)
 - [Objects](#objects)
 - [Arrays](#arrays)
 - [Modules](#modules)
@@ -457,7 +458,7 @@ console.error('Tried saving workout that isn’t owned %o', workout)
 
 
 <br />
-## Naming conventions
+## Naming Conventions
 
 Be descriptive with your naming choice. Avoid unnecessary abbreviations because they might not be as obvious to someone else:
 
@@ -776,6 +777,49 @@ let updatedSettings = reduxUtil.updateData(
 
 
 **Note:** All of these rules are recursive, meaning if there is a function within a function, the same rules apply to that function.
+
+
+
+
+
+<br />
+## Strings
+
+Use the literals:
+
+```javascript
+// Bad
+var myString = new String()
+
+// Good
+var myString = ''
+```
+
+
+Use templating instead of concatenating strings:
+
+```js
+// Bad
+let str = 'hey ' + user.data.name
+
+// Good
+let str = `hey ${user.data.name}`
+```
+
+
+Join an array of strings if they overflow:
+```js
+// Bad
+let longString = 'hey man, i was walking down the street the other day and' +
+  ' noticed a huge pile of crap on your doorstep'
+
+// Good
+let longString = [
+  'hey man, i was walking down the street the other day and',
+  'noticed a huge pile of crap on your doorstep',
+  'so i cleaned it up',
+].join(' ')
+```
 
 
 
