@@ -1,4 +1,4 @@
-# Testing the Frontend JavaScript
+# Testing JavaScript
 
 
 <br />
@@ -14,6 +14,32 @@
 <br />
 
 ---
+
+## Formats
+
+### Error Throwing
+
+When testing that an error is thrown, use `boundErrorFunction.should.throw(err)`.
+
+When the error function is a generator, use `co` to wrap the bound function and add `eventually`.
+
+Example:
+```js
+it('requires a valid session token', function* () {
+
+  let ctx = belinda.createCtx(null, {
+    method       : REQUEST.METHOD.POST,
+    path         : router.url('post', { className: 'Post' }),
+    sessionToken : 'invalid',
+  })
+  let next = function* () {}
+  co(setSessionUser.bind(ctx, next)).should.eventually.throw({
+    status  : RESPONSE.ERROR.STATUS.BAD_REQUEST,
+    message : RESPONSE.ERROR.MESSAGE.API.INVALID_SESSION_TOKEN
+  })
+
+})
+```
 
 
 

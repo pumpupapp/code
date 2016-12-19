@@ -1,6 +1,6 @@
 # Legend
 
-* [JavaScript Frontend](JavaScript Frontend.md)
+* [JavaScript](JavaScript.md)
 
 
 ## Questions
