@@ -5,6 +5,10 @@
   * Write stories for the week and place them in the `Backlog`
 * Enter the room *on time*
   * Bring your laptop
+* Close your laptop
+  * And your phone, Google glass, whatever else can distract you
+* Pay attention to the introduction
+  * Generally an informative video followed by a brainstorming session
 * Each attendee must...
   * Demo/share what you did over the past week
     * Mark all `Delivered` Pivotal stories as `Accepted` or `Rejected`
