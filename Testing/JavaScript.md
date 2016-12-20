@@ -1,23 +1,98 @@
 # Testing JavaScript
 
-
-<br />
-## Libraries
-
-1. [Mocha](https://mochajs.org/): the test suite
-* [Karma](http://karma-runner.github.io/): the test runner
-* [Sinon](http://sinonjs.org/): the spying library
-* [Should.js](http://shouldjs.github.io/): the assertion library
+1. [Writing Tests](#writing-tests)
+* [Concepts](#concepts)
+* [Libraries](#libraries)
 
 
 
 <br />
+## Writing Tests
 
----
 
-## Formats
+### Describing Modules and Units
 
-### Error Throwing
+When describing a **directory** or **module**, use a leading slash (`/`):
+```jsx
+describe('/components', () => {
+  require('./components/index.tests')
+})
+```
+
+When describing a **component**, use the JSX notation:
+```jsx
+describe('<Modal />', () => {
+  // ...
+})
+```
+
+When describing a **static method**, use a leading hash (`#`):
+```jsx
+describe('/Dom', () => {
+  describe('#show', () => {
+    // ...
+  })
+})
+```
+
+When describing an **instance method**, use double leading colons (`::`):
+```jsx
+describe('/WorkoutExercise', () => {
+  describe('::getCalories', () => {
+    // ...
+  })
+})
+```
+
+When describing a **static property**, use a leading period (`.`):
+```jsx
+describe('/Comment', () => {
+  describe('.MAX_LENGTH', () => {
+    // ...
+  })
+})
+```
+
+When describing an **instance property**, use double leading periods (`..`):
+```jsx
+describe('<Modal />', () => {
+  describe('..props', () => {
+    describe('.theme', () => {
+      // ...
+    })
+  })
+})
+```
+
+
+<br />
+
+
+### Defining Unit Functionality
+
+Tests should always begin with the action e.g `returns`, `gets`, `saves`, `throws` etc.
+
+```jsx
+it('returns a string with the mentions wrapped in anchor tags', ...)
+```
+
+
+<br />
+
+
+### Making Assertions
+
+```jsx
+fn.callCount.should.eql(1)
+fn.lastCall.args.length.should.eql(3)
+```
+
+
+<br />
+
+
+### Testing Error Handling
+
 
 When testing that an error is thrown, use `boundErrorFunction.should.throw(err)`.
 
@@ -40,6 +115,8 @@ it('requires a valid session token', function* () {
 
 })
 ```
+
+###### [More about assertions](http://shouldjs.github.io/)
 
 
 
@@ -282,117 +359,16 @@ let module = moduleInjector({
 ```
 
 
+
+
 <br />
 
 ---
 
-
-
 <br />
-## Writing tests
+## Libraries
 
-
-### Describing modules and units
-
-- When describing a **directory** or **module**, use a leading slash (`/`):
-```jsx
-describe('/components', () => {
-  require('./components/index.tests')
-})
-```
-
-- When describing a **component**, use the JSX notation:
-```jsx
-describe('<Modal />', () => {
-  // ...
-})
-```
-
-- When describing a **static method**, use a leading hash (`#`):
-```jsx
-describe('/Dom', () => {
-  describe('#show', () => {
-    // ...
-  })
-})
-```
-
-- When describing an **instance method**, use double leading colons (`::`):
-```jsx
-describe('/WorkoutExercise', () => {
-  describe('::getCalories', () => {
-    // ...
-  })
-})
-```
-
-- When describing a **static property**, use a leading period (`.`):
-```jsx
-describe('/Comment', () => {
-  describe('.MAX_LENGTH', () => {
-    // ...
-  })
-})
-```
-
-- When describing an **instance property**, use double leading periods (`..`):
-```jsx
-describe('<Modal />', () => {
-  describe('..props', () => {
-    describe('.theme', () => {
-      // ...
-    })
-  })
-})
-```
-
-
-
-<br />
-### Testing Failure
-
-- When testing when a unit is supposed to fail, use a variable in the catch statement.
-
-```jsx
-it('throws an error if a schema’s model has no classname', () => {
-
-  let isCaught = false
-  try {
-    reduxUtil.define('Test', {
-      schema: {
-        model: { type: STORE.DATA_TYPE.MODEL },
-      }
-    })
-  }
-  catch (err) {
-    err.message.should.match(/must have classname/)
-    isCaught = true
-  }
-
-  isCaught.should.eql(true)
-
-})
-```
-
-
-
-<br />
-### Defining unit functionality
-
-- Tests should always begin with the action e.g `returns`, `gets`, `saves`, `throws` etc.
-
-```jsx
-it('returns a string with the mentions wrapped in anchor tags', ...)
-```
-
-<br />
-### Making assertions
-
-```jsx
-fn.callCount.should.eql(1)
-fn.lastCall.args.length.should.eql(3)
-```
-
-
-<br />
-###### [More about assertions](http://shouldjs.github.io/)
+1. [Mocha](https://mochajs.org/): the test suite
+* [Karma](http://karma-runner.github.io/): the test runner
+* [Sinon](http://sinonjs.org/): the spying library
+* [Should.js](http://shouldjs.github.io/): the assertion library
