@@ -94,12 +94,28 @@ fn.lastCall.args.length.should.eql(3)
 ### Testing Error Handling
 
 
-When testing that an error is thrown, use `boundErrorFunction.should.throw(err)`.
+When testing that an error is thrown, use `co` to wrap the bound function, and get a promise.
+Ensure the promise gets rejected by chaining `should.be.rejected()`
 
-When the error function is a generator, use `co` to wrap the bound function and add `eventually`.
+Note: Avoid using `yiled co(fn()).should.eventually.throw()` since if `fn` is promisified, `co` will return a rejected promise, and will never throw.
 
 Example:
 ```js
+it('ensure an error is thrown', function* () {
+
+  let gen = function* (arg1) {
+    throw Error(arg1)
+  }
+  let fn  = function  (arg1) {
+    return Promise.reject(Error(arg1))
+  }
+
+  yield co(gen('abc')).should.be.rejectedWith('abc')
+  yield co(fn('xyz')).should.be.rejectedWith('xyz')
+
+})
+
+
 it('requires a valid session token', function* () {
 
   let ctx = belinda.createCtx(null, {
@@ -108,7 +124,7 @@ it('requires a valid session token', function* () {
     sessionToken : 'invalid',
   })
   let next = function* () {}
-  co(setSessionUser.bind(ctx, next)).should.eventually.throw({
+  yield co(setSessionUser.bind(ctx, next)).should.be.rejectedWith({
     status  : RESPONSE.ERROR.STATUS.BAD_REQUEST,
     message : RESPONSE.ERROR.MESSAGE.API.INVALID_SESSION_TOKEN
   })
