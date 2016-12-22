@@ -112,6 +112,8 @@ it('ensure an error is thrown', function* () {
 
   yield co(gen('abc')).should.be.rejectedWith('abc')
   yield co(fn('xyz')).should.be.rejectedWith('xyz')
+  
+  yiled co(fn('abc')).should.eventually.throw('xyz') // <- Will not throw an error
 
 })
 
