@@ -166,10 +166,10 @@ deviceUsers.should.have.size(5)
 // No error
 
 deviceUsers.should.have.size(2)
-// Wrong error message: `Uncaught TypeError: this._addToRedisUserPosts is not a function`
+// `Uncaught TypeError: this._addToRedisUserPosts is not a function`
 
 deviceUsers.length.should.eql(2)
-// Correct error message: `AssertionError: expected 5 to equal 2`
+// `AssertionError: expected 5 to equal 2`
 ```
 
 
