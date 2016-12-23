@@ -110,10 +110,13 @@ it('ensure an error is thrown', function* () {
     return Promise.reject(Error(arg1))
   }
 
+  // Will not throw:
   yield co(gen('abc')).should.be.rejectedWith('abc')
   yield co(fn('xyz')).should.be.rejectedWith('xyz')
   
-  yield co(fn('abc')).should.eventually.throw('xyz') // <- Will not throw an error
+  // Will thow an unhandled promise rejection error if Bluebird is used
+  // Will give a warning and not work as expected, if native Promise is used
+  yield co(fn('abc')).should.eventually.throw('abc')
 
 })
 
@@ -133,6 +136,31 @@ it('requires a valid session token', function* () {
 
 })
 ```
+
+
+### Known issues
+
+`should#assertions` gives ambigues error messages if error is thrown.
+
+```js
+yiled users = belinda.create('User', 5)
+yiled device.setUsers(users)
+
+let deviceUsers = yield device.getUsers()
+
+deviceUsers.should.have.size(5)
+// No error
+
+deviceUsers.should.have.size(2)
+// Wrong error message: `Uncaught TypeError: this._addToRedisUserPosts is not a function`
+
+deviceUsers.length.should.eql(2)
+// Correct error message: `AssertionError: expected 5 to equal 2`
+```
+
+
+
+
 
 ###### [More about assertions](http://shouldjs.github.io/)
 
