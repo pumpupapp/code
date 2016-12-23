@@ -95,28 +95,38 @@ fn.lastCall.args.length.should.eql(3)
 
 
 When testing that an error is thrown, use `co` to wrap the bound function, and get a promise.
-Ensure the promise gets rejected by chaining `should.be.rejected()`
+Ensure the promise gets rejected by chaining `should.be.rejected()` or `should.be.rejectedWith()`
 
-Note: Avoid using `yiled co(fn()).should.eventually.throw()` since if `fn` is promisified, `co` will return a rejected promise, and will never throw.
-
+Note: Avoid using `yield co(...).should.eventually.throw()` since it would not work if tested function is promisified.
+The error is thrown in the context of a callback, and not caught by should.js, which wraps the promise.
+At the same time promise rejection is not handled with this syntax.
 Example:
 ```js
 it('ensure an error is thrown', function* () {
 
-  let gen = function* (arg1) {
+  let gen_throw = function* (arg1) {
     throw Error(arg1)
   }
-  let fn  = function  (arg1) {
+  let fn_reject = function(arg1) {
     return Promise.reject(Error(arg1))
   }
+  let fn_throw = function(arg1) {
+    throw Error(arg1)
+  }
 
-  // Will not throw:
-  yield co(gen('abc')).should.be.rejectedWith('abc')
-  yield co(fn('xyz')).should.be.rejectedWith('xyz')
-  
-  // Will thow an unhandled promise rejection error if Bluebird is used
-  // Will give a warning and not work as expected, if native Promise is used
-  yield co(fn('abc')).should.eventually.throw('abc')
+  // For synchronous functions just use `fn.should.throw()`.
+  // Bind arguments if needed.
+  fn_throw.bind(null, 'abc').should.throw('abc')
+
+  // Using `co(...).should.be.rejected()` ensures consistent behavior with all types of inputs
+  yield co(gen_throw('abc')).should.be.rejectedWith('abc')
+  yield co(fn_reject('abc')).should.be.rejectedWith('abc')
+  yield co(fn_throw('abc')).should.be.rejectedWith('abc')
+
+  // Avoid `co(...).should.eventually.throw()`
+  yield co(fn_reject('abc')).should.eventually.throw('abc')
+  // Will throw an un-handled promise rejection or give a warning
+  // Will not ensure 'abc' == 'abc'
 
 })
 
@@ -129,7 +139,11 @@ it('requires a valid session token', function* () {
     sessionToken : 'invalid',
   })
   let next = function* () {}
-  yield co(setSessionUser.bind(ctx, next)).should.be.rejectedWith({
+
+  yield co(
+    setSessionUser.call(ctx, next)
+  )
+  .should.be.rejectedWith({
     status  : RESPONSE.ERROR.STATUS.BAD_REQUEST,
     message : RESPONSE.ERROR.MESSAGE.API.INVALID_SESSION_TOKEN
   })
@@ -140,11 +154,11 @@ it('requires a valid session token', function* () {
 
 ### Known issues
 
-`should#assertions` gives ambigues error messages if error is thrown.
+`should#assertions` gives ambiguous error messages when assertions for collections of sequelize objects fail.
 
 ```js
-yiled users = belinda.create('User', 5)
-yiled device.setUsers(users)
+yield users = belinda.create('User', 5)
+yield device.setUsers(users)
 
 let deviceUsers = yield device.getUsers()
 
