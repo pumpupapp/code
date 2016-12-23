@@ -152,7 +152,7 @@ it('requires a valid session token', function* () {
 ```
 
 
-### Known issues
+### Known Issues
 
 `should#assertions` gives ambiguous error messages when assertions for collections of sequelize objects fail.
 
