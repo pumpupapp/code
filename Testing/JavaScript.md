@@ -152,24 +152,21 @@ it('requires a valid session token', function* () {
 ```
 
 
-### Known issues
+### Known Issues
 
-`should#assertions` gives ambiguous error messages when assertions for collections of sequelize objects fail.
+`should#assertion` gives wrong error messages when assertions fail for sequelize objects (or their collections).
 
 ```js
-yield users = belinda.create('User', 5)
-yield device.setUsers(users)
+let users = yield belinda.create('User', 5)
 
-let deviceUsers = yield device.getUsers()
-
-deviceUsers.should.have.size(5)
+users.should.have.size(5)
 // No error
 
-deviceUsers.should.have.size(2)
-// Wrong error message: `Uncaught TypeError: this._addToRedisUserPosts is not a function`
+users.should.have.size(2)
+// `TypeError: this.getHashtags is not a function`
 
-deviceUsers.length.should.eql(2)
-// Correct error message: `AssertionError: expected 5 to equal 2`
+users.length.should.eql(2)
+// `AssertionError: expected 5 to equal 2`
 ```
 
 
