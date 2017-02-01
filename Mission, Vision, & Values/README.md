@@ -3,7 +3,11 @@
 
 ## Mission
 
-*To get people to act on your health & fitness goals.*
+**To inspire and empower people to achieve their health & fitness goals.**
+
+*Inspire* with community motivation & feedback
+*Empower* with proper knowledge and guidance
+*Achieve* with emotional goal-setting and accountability
 
 
 
@@ -37,10 +41,10 @@ What is the goal of having values?
   * Eg. "We won’t spam your friends. Pinky swear!"
 * Be Adventurous, **Creative**, and Open-Minded
   * Eg. Introducing a new type of marketplace
-* Pursue **Growth** and Learning
+* Pursue Growth and **Learning**
   * Eg. Lunch n' Learns, Sprint Plan brainstorms
 * Build Open and **Honest** Relationships through Communication
-  * Eg. Sprint Plans, Slack
+  * Eg. Weekly Lunches, Monthly Outings, Sprint Plans, Slack
 * Build a **Positive** Team and Family Spirit
   * Eg. Weekly lunches, monthly outings
 * Be **Humble**
