@@ -22,8 +22,10 @@
 * Expectations
   * More
   * Less
-* Line changes
-* Test coverage
+* Code
+  * Line changes
+  * Commits
+  * Test coverage
 
 
 
