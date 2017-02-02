@@ -8,6 +8,7 @@ A minimalist's guide to modern JavaScript.
 ## Table of Contents
 
 - [Structure](#structure)
+- [Indentation](#indentation)
 - [Semicolons](#semicolons)
 - [Comments](#comments)
 - [Logs](#logs)
@@ -181,6 +182,32 @@ var oriento = require('oriento')
 var one            = 1
 var fifteen        = 15
 var onePlusFifteen = one + fifteen
+```
+
+
+<br />
+## Indentation
+
+Indent chained functions with two spaces on the following lines.
+
+###### Good
+
+```javascript
+let response = yield request(app)
+  .post(url)
+  .send({})
+  .expect(RESPONSE.SUCCESS.STATUS.OK)
+  .end()
+```
+
+###### Bad
+
+```javascript
+let response = yield request(app)
+                     .post(url)
+                     .send({})
+                     .expect(RESPONSE.SUCCESS.STATUS.OK)
+                     .end()
 ```
 
 
@@ -1193,7 +1220,7 @@ describe('/reduxUtil', () => {
     ///////////
 
 
-    it('creats a model')
+    it('creates a model')
 
 
     // ...
