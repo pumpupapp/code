@@ -130,9 +130,9 @@ ClipMenu is a utility app that keeps a history of your clipboard. Verrrry useful
 5. Change “History Menu” to `Cmd + Opt + g`
 6. Change “Snippets Menu” to `Cmd + Opt + b`
 
-### [Better Touch Tool](http://bettertouchtool.en.softonic.com/mac)
+### [Spectacles](https://www.spectacleapp.com/)
 
-Better Touch Tool is a utility app that let’s you add keyboard shortcuts to a lot of basic MacOS actions, like window sizing/moving. [Here’s a quick tutorial](http://mac.appstorm.net/reviews/productivity-review/controlling-your-mac-with-bettertouchtool/) to get you familiarized.
+Spectacles is a utility app that let’s you add keyboard shortcuts to a lot of basic MacOS actions, like window sizing/moving.
 
 
 
