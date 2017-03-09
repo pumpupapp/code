@@ -158,6 +158,8 @@ const TEXT_MAX_LENGTH = 1000
 
 #### Alignment
 
+##### Variable Assignments
+
 Align groups of variable assignments:
 
 ###### Bad
@@ -182,6 +184,88 @@ var oriento = require('oriento')
 var one            = 1
 var fifteen        = 15
 var onePlusFifteen = one + fifteen
+```
+
+```javascript
+const debug   = require('debug')('javascript')
+const lodash  = require('lodash')
+const oriento = require('oriento')
+
+const CONVERSATION = requireRoot('constants/conversation')
+const MESSAGE      = requireRoot('constants/message')
+const RESPONSE     = requireRoot('constants/response')
+const SUBSCRIPTION = requireRoot('constants/subscription')
+const TEST         = requireRoot('constants/test')
+const db           = requireRoot('database')
+const stripeUtil   = requireRoot('utils/stripe')
+```
+
+If the aligned variables go past the 80-character limit, don't align them:
+
+###### Bad
+
+```javascript
+let one                                          = 'thisIsAVeryLongValueThatWillBreakTheLimit'
+let two                                          = 2
+let three                                        = 3
+let thisIsAReallyLongVariableNameWithAShortValue = 4
+```
+
+###### Good
+
+```javascript
+let one = 'thisIsAVeryLongValueThatWillBreakTheLimit'
+let two = 2
+let three = 3
+let thisIsAReallyLongVariableNameWithAShortValue = 4
+```
+
+##### Objects
+
+Align values inside of objects:
+
+###### Bad
+
+```javascript
+let object = {
+  one: 1,
+  two: 2,
+  three: 3,
+}
+```
+
+###### Good
+
+```javascript
+let object = {
+  one   : 1,
+  two   : 2,
+  three : 3,
+}
+```
+
+If the aligned properties and values go past the 80-character limit, don't align them:
+
+###### Bad
+
+```javascript
+let object = {
+  one                                          : 'thisIsAVeryLongValueThatWillBreakTheLimit',
+  two                                          : 2,
+  three                                        : 3,
+  thisIsAReallyLongPropertyNameWithAShortValue : 4,
+}
+```
+
+###### Good
+
+```javascript
+let object = {
+  one: 'thisIsAVeryLongValueThatWillBreakTheLimit',
+  two: 2,
+  three: 3,
+  thisIsAReallyLongPropertyNameWithAShortValue: 4,
+}
 ```
 
 
