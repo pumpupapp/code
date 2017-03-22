@@ -4,7 +4,6 @@ A minimalist's guide to modern JavaScript.
 
 
 
-<br />
 ## Table of Contents
 
 - [Structure](#structure)
@@ -26,7 +25,6 @@ A minimalist's guide to modern JavaScript.
 
 
 
-<br />
 ## Structure
 
 #### Spaces or tabs
@@ -158,6 +156,8 @@ const TEXT_MAX_LENGTH = 1000
 
 #### Alignment
 
+##### Variable Assignments
+
 Align groups of variable assignments:
 
 ###### Bad
@@ -184,8 +184,90 @@ var fifteen        = 15
 var onePlusFifteen = one + fifteen
 ```
 
+```javascript
+const debug   = require('debug')('javascript')
+const lodash  = require('lodash')
+const oriento = require('oriento')
 
-<br />
+const CONVERSATION = requireRoot('constants/conversation')
+const MESSAGE      = requireRoot('constants/message')
+const RESPONSE     = requireRoot('constants/response')
+const SUBSCRIPTION = requireRoot('constants/subscription')
+const TEST         = requireRoot('constants/test')
+const db           = requireRoot('database')
+const stripeUtil   = requireRoot('utils/stripe')
+```
+
+If the aligned variables go past the 80-character limit, don't align them:
+
+###### Bad
+
+```javascript
+let one                                          = 'thisIsAVeryLongValueThatWillBreakTheLimit'
+let two                                          = 2
+let three                                        = 3
+let thisIsAReallyLongVariableNameWithAShortValue = 4
+```
+
+###### Good
+
+```javascript
+let one = 'thisIsAVeryLongValueThatWillBreakTheLimit'
+let two = 2
+let three = 3
+let thisIsAReallyLongVariableNameWithAShortValue = 4
+```
+
+##### Objects
+
+Align values inside of objects:
+
+###### Bad
+
+```javascript
+let object = {
+  one: 1,
+  two: 2,
+  three: 3,
+}
+```
+
+###### Good
+
+```javascript
+let object = {
+  one   : 1,
+  two   : 2,
+  three : 3,
+}
+```
+
+If the aligned properties and values go past the 80-character limit, don't align them:
+
+###### Bad
+
+```javascript
+let object = {
+  one                                          : 'thisIsAVeryLongValueThatWillBreakTheLimit',
+  two                                          : 2,
+  three                                        : 3,
+  thisIsAReallyLongPropertyNameWithAShortValue : 4,
+}
+```
+
+###### Good
+
+```javascript
+let object = {
+  one: 'thisIsAVeryLongValueThatWillBreakTheLimit',
+  two: 2,
+  three: 3,
+  thisIsAReallyLongPropertyNameWithAShortValue: 4,
+}
+```
+
+
+
 ## Indentation
 
 Indent chained functions with two spaces on the following lines.
@@ -211,7 +293,6 @@ let response = yield request(app)
 ```
 
 
-<br />
 ## Semicolons
 
 Don't use them. JavaScript has reliable ASI (automatic-semicolon-insertion) which allows for cleaner looking code.
@@ -244,7 +325,6 @@ function mapArgs(args, fn) {
 ```
 
 
-<br />
 ## Comments
 
 Comments are necessary to describe to humans what a snippet of code is doing - however, they must be as concise as possible to make them easier to maintain as the snippet evolves.
@@ -443,8 +523,6 @@ Module comments are used to describe the contents of a module in a simple way.
 ```
 
 
-
-<br />
 ## Logs
 
 To aid in debugging, we add logs to our code.
@@ -483,8 +561,6 @@ console.error('Tried saving workout that isn’t owned %o', workout)
 ```
 
 
-
-<br />
 ## Naming Conventions
 
 Be descriptive with your naming choice. Avoid unnecessary abbreviations because they might not be as obvious to someone else:
@@ -546,7 +622,6 @@ var MyObj = function(name) {
 ```
 
 
-<br />
 ## Variables
 
 Use multiple `var` declarations instead of comma separating them:
@@ -562,7 +637,6 @@ var someOtherVar = false
 ```
 
 
-<br />
 ## Functions
 
 Know the basic terminology:
@@ -809,7 +883,6 @@ let updatedSettings = reduxUtil.updateData(
 
 
 
-<br />
 ## Strings
 
 Use the literals:
@@ -852,7 +925,6 @@ let longString = [
 
 
 
-<br />
 ## Objects
 
 Use the literals:
@@ -888,7 +960,6 @@ var object = {
 ```
 
 
-<br />
 ## Arrays
 
 Use the literals:
@@ -936,7 +1007,6 @@ var longArray = [
 ```
 
 
-<br />
 ## Modules
 
 A module's imports and exports should appear at the very top of the file:
@@ -967,7 +1037,6 @@ let datetime    = require('utils/datetime')
 ```
 
 
-<br />
 ## Conditionals
 
 Be explicit with your conditional checks by always using `===`, unless:
@@ -1099,7 +1168,6 @@ if (
 ```
 
 
-<br />
 ## Loops
 
 Avoid loops whenever possible. They aren't as flexible as native array methods, such as `forEach`, `map`, `filter`, etc.
@@ -1136,7 +1204,6 @@ do {
 
 
 
-<br />
 ## Tests
 
 A good test ensures that a unit of code behaves as expected without caring about the implementation. For every test case, there should be 1 corresponding `it`. Inside of an `it`, there may be multiple tests for different examples of the test case.
@@ -1235,7 +1302,6 @@ describe('/reduxUtil', () => {
 
 
 
-<br />
 ## Linting
 
 The following `.eslintrc` files are used to lint our JavaScript (based on context):
@@ -1400,10 +1466,3 @@ The following `.eslintrc` files are used to lint our JavaScript (based on contex
   }
 }
 ```
-
-
-
-
-
-
-<br /><br /><br /><br /><br /><br />
