@@ -19,7 +19,8 @@ A **Standup** is a summary of what you did the previous work day and what you wi
 
 * Must be posted every work day
 * Must be posted in **#dev_standups**
-* Must be posted within 15 minutes of starting work on your computer
+* Must be posted within 1 hour of starting work on your computer
+  * Failure to do so will result in an automatic fail
 
 
 
