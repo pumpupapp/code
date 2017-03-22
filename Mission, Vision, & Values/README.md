@@ -1,4 +1,4 @@
-# Mission, Vision, & Values
+# Mission, Vision, Values, & Mantras
 
 
 ## Mission
@@ -50,4 +50,4 @@ What is the goal of having values?
 * Be **Humble**
   * Eg. Code/design reviews
 
-Ian's tldr; "Be amazing and don't be a jerk."
+tldr; "Be amazing and don't be a jerk."
