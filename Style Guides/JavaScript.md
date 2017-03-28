@@ -82,7 +82,7 @@ Maintain **1 line break** between groups of statements to improve readability:
 
 ```javascript
 function someEpicMethod() {
-  var values = getSomeAmazingThings()
+  let values = getSomeAmazingThings()
   // Manipulate the values
   values = values.map(doSomeOtherAmazingThing)
   values = values.map(doOneMoreOtherAmazingThing)
@@ -95,7 +95,7 @@ function someEpicMethod() {
 ```javascript
 function someEpicMethod() {
 
-  var values = getSomeAmazingThings()
+  let values = getSomeAmazingThings()
 
   // Manipulate the values
   values = values.map(doSomeOtherAmazingThing)
@@ -163,25 +163,25 @@ Align groups of variable assignments:
 ###### Bad
 
 ```javascript
-var debug = require('debug')('javascript')
-var lodash = require('lodash')
-var oriento = require('oriento')
+let debug = require('debug')('javascript')
+let lodash = require('lodash')
+let oriento = require('oriento')
 
-var one = 1
-var fifteen = 15
-var onePlusFifteen = one + fifteen
+let one = 1
+let fifteen = 15
+let onePlusFifteen = one + fifteen
 ```
 
 ###### Good
 
 ```javascript
-var debug   = require('debug')('javascript')
-var lodash  = require('lodash')
-var oriento = require('oriento')
+let debug   = require('debug')('javascript')
+let lodash  = require('lodash')
+let oriento = require('oriento')
 
-var one            = 1
-var fifteen        = 15
-var onePlusFifteen = one + fifteen
+let one            = 1
+let fifteen        = 15
+let onePlusFifteen = one + fifteen
 ```
 
 ```javascript
@@ -303,7 +303,7 @@ Example by inserting semicolon:
 
 ```javascript
 function myFunc() {
-  var collection = []
+  let collection = []
   ;[].map.call(arguments, function() {
     // ...
   })
@@ -314,7 +314,7 @@ Or better yet, a small refactor:
 
 ```javascript
 function myFunc() {
-  var collection = []
+  let collection = []
   mapArgs(arguments, function() {
     // ...
   })
@@ -567,14 +567,14 @@ Be descriptive with your naming choice. Avoid unnecessary abbreviations because 
 
 ```javascript
 // Bad
-var btn  = document.getElementById('button')
-var stmt = ''
-var age  = user.age()
+let btn  = document.getElementById('button')
+let stmt = ''
+let age  = user.age()
 
 // Good
-var button    = document.getElementById('button')
-var statement = ''
-var age       = user.getAge()
+let button    = document.getElementById('button')
+let statement = ''
+let age       = user.getAge()
 ```
 
 If a method returns something, it should be prefixed with `get`, `is`, etc. If a method sets something, it should be prefixed with `set`, `update`, `insert`, etc.
@@ -592,12 +592,12 @@ camelCase        : used for everything else
 For example:
 
 ```javascript
-var MY_CONSTANT   = 500
-var myVariable    = true
-var myConstructor = new MyConstructor()
-var myClass       = new MyClass()
-var myObject      = Object.create(MyObject)
-var myFunction    = function(myArg) {}
+let MY_CONSTANT   = 500
+let myVariable    = true
+let myConstructor = new MyConstructor()
+let myClass       = new MyClass()
+let myObject      = Object.create(MyObject)
+let myFunction    = function(myArg) {}
 ```
 
 ###### Private members
@@ -607,7 +607,7 @@ Typically, you can achieve private members through function or module scoping. H
 For example:
 
 ```javascript
-var MyObj = function(name) {
+let MyObj = function(name) {
   this._name = name
 
   this.setName = function(name) {
@@ -628,12 +628,43 @@ Use multiple `var` declarations instead of comma separating them:
 
 ```javascript
 // Bad
-var someVar      = true,
+let someVar      = true,
     someOtherVar = false
 
 // Good
-var someVar      = true
-var someOtherVar = false
+let someVar      = true
+let someOtherVar = false
+```
+
+Use `const` if a variable is never reassigned because:
+- It prevents reassignment by mistakes.
+- It reduces the cognitive load for readers and reviewers.
+
+Note:
+- `const` does not protect against mutation. It only protects against reassignemnt.
+- Using `const` to declare a variable does not make a constraint on future code changes. It could be changed to `let` if reassignment becomes necesary.
+
+```javascript
+// Bad
+var varNeverReassigned = 'foo'
+
+// Bad
+let varNeverReassigned = 'foo'
+
+// Good
+const varNeverReassigned = 'foo'
+```
+
+If a variable is reassigned, use `let` instead. Do NOT use `var`.
+
+```javascript
+// Bad
+var varReassigned = 'bar'
+varReassigned = 'baz'
+
+// Good
+let varReassigned = 'bar'
+varReassigned = 'baz'
 ```
 
 
@@ -643,16 +674,16 @@ Know the basic terminology:
 
 ```javascript
 // Anonymous function expression
-var anonymous = function() {}
+let anonymous = function() {}
 
 // Named function expression
-var named = function named() {}
+let named = function named() {}
 
 // Function declaration
 function declaration() {}
 
 // Arrow function
-var arrow = () => {}
+let arrow = () => {}
 ```
 
 **Only use function declarations** for the sake of consistency and added benefits they come with.
@@ -664,10 +695,10 @@ module.exports = {
 }
 
 // Bad
-var myFunc = function myMethod() {}
+let myFunc = function myMethod() {}
 
 // Bad
-var myMethod = () => {}
+let myMethod = () => {}
 
 // Good
 module.exports = {
@@ -681,7 +712,7 @@ The only exception is when defining a private function within another function, 
 ```javascript
 function myMethod(user) {
 
-  var success = () => {
+  let success = () => {
     console.log('Success')
   }
 
@@ -704,7 +735,7 @@ function myFunc(a, b) {
 }
 
 function getWorkout(workoutId, options) {
-  var q = new Parse.Query(Workout)
+  let q = new Parse.Query(Workout)
   q.get(workoutId, options)
 }
 
@@ -735,30 +766,30 @@ The arguments of arrow functions should **always** be wrapped in parentheses, **
 
 ```javascript
 // Bad
-var singleLine = (one) => one.map(two)
+let singleLine = (one) => one.map(two)
 
-var multipleLineReturn = (options) => ({
+let multipleLineReturn = (options) => ({
   ...options,
   something: true,
 })
 
-var multipleLineBody = data => {
-  var newData = data.map(newness)
+let multipleLineBody = data => {
+  let newData = data.map(newness)
   // ...
   return newData
 }
 
 
 // Good
-var singleLine = one => one.map(two)
+let singleLine = one => one.map(two)
 
-var multipleLineReturn = options => ({
+let multipleLineReturn = options => ({
   ...options,
   something: true,
 })
 
-var multipleLineBody = (data) => {
-  var newData = data.map(newness)
+let multipleLineBody = (data) => {
+  let newData = data.map(newness)
   // ...
   return newData
 }
@@ -773,8 +804,8 @@ All private function declarations should be defined *after* the `return` stateme
 // Bad
 function calculate(options) {
 
-  var start = options.starting.map(calcStart)
-  var end = options.ending.map(calcEnd)
+  let start = options.starting.map(calcStart)
+  let end = options.ending.map(calcEnd)
 
   function calcStart(starting) {
     /* do some magic */
@@ -790,8 +821,8 @@ function calculate(options) {
 // Good
 function calculate(options) {
 
-  var start = options.starting.map(calcStart)
-  var end = options.ending.map(calcEnd)
+  let start = options.starting.map(calcStart)
+  let end = options.ending.map(calcEnd)
 
   return start.join('') + end.join('')
 
@@ -814,7 +845,7 @@ Whitespace **around a function** should look like this:
 function getSomeValue(object, propertyName) {
   // ..
 }
-var value = getSomeValue(someObject, 'property')
+let value = getSomeValue(someObject, 'property')
 ```
 
 Whitespace **around a generator** should look like this:
@@ -832,16 +863,16 @@ Whitespace **within a function** should look like this:
 ```javascript
 // For functions of 3 lines or less
 function myShortFn() {
-  var x = 1
+  let x = 1
   return x + 1
 }
 
 // For functions longer than 3 lines
 function myLogFn() {
 
-  var x = 1
-  var y = 2
-  var z = 3
+  let x = 1
+  let y = 2
+  let z = 3
 
   return x * y + z
 
@@ -889,10 +920,10 @@ Use the literals:
 
 ```javascript
 // Bad
-var myString = new String()
+let myString = new String()
 
 // Good
-var myString = ''
+let myString = ''
 ```
 
 
@@ -931,10 +962,10 @@ Use the literals:
 
 ```javascript
 // Bad
-var myObject = new Object()
+let myObject = new Object()
 
 // Good
-var myObject = {}
+let myObject = {}
 ```
 
 ###### Trailing commas
@@ -942,7 +973,7 @@ var myObject = {}
 Trailing commas are fine:
 
 ```javascript
-var object = {
+let object = {
   prop1: true,
   prop2: false,
 }
@@ -953,7 +984,7 @@ var object = {
 Whitespace around an object should look like this:
 
 ```javascript
-var object = {
+let object = {
   prop: true,
   method: function() {}
 }
@@ -966,10 +997,10 @@ Use the literals:
 
 ```javascript
 // Bad
-var myArray = new Array()
+let myArray = new Array()
 
 // Good
-var myArray = []
+let myArray = []
 ```
 
 Don't mess directly with the array's indices **unless** if you're mutating it with a targeted index. Use `[].push` instead.
@@ -979,7 +1010,7 @@ Don't mess directly with the array's indices **unless** if you're mutating it wi
 Trailing commas are fine:
 
 ```javascript
-var array = [
+let array = [
   'value1',
   'value2',
 ]
@@ -990,8 +1021,8 @@ var array = [
 Whitespace around an array should look like this:
 
 ```javascript
-var shortArray = ['some', 'value', 'here']
-var longArray = [
+let shortArray = ['some', 'value', 'here']
+let longArray = [
   'some',
   'values',
   'seem',
@@ -1062,8 +1093,8 @@ Or better yet, cache the condition:
 
 ```javascript
 // Best
-var isSomething = !!something
-var isEmptyArray = !array.length
+let isSomething = !!something
+let isEmptyArray = !array.length
 if (isSomething) {}
 if (isEmptyArray) {}
 ```
