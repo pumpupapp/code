@@ -242,14 +242,16 @@ let object = {
 }
 ```
 
-If the aligned properties and values go past the 80-character limit, don't align them:
+If one or more properties go past the 80-character limit or span multiple lines, alignment is optional:
 
 ###### Bad
 
 ```javascript
 let object = {
   one                                          : 'thisIsAVeryLongValueThatWillBreakTheLimit',
-  two                                          : 2,
+  two                                          : {
+    foo: 'bar',
+  },
   three                                        : 3,
   thisIsAReallyLongPropertyNameWithAShortValue : 4,
 }
@@ -260,7 +262,9 @@ let object = {
 ```javascript
 let object = {
   one: 'thisIsAVeryLongValueThatWillBreakTheLimit',
-  two: 2,
+  two: {
+    foo: 'bar',
+  },
   three: 3,
   thisIsAReallyLongPropertyNameWithAShortValue: 4,
 }
