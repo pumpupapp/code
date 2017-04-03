@@ -1137,16 +1137,18 @@ return // ...
 For conditions that require more than 1 line, use the following format:
 
 ```javascript
-// Only ORs
+// ORs
 if (
-  condition1 ||
-  condition2 ||
+  condition1
+  ||
+  condition2
+  ||
   condition3
 ) {
   // ...
 }
 
-// Only ANDs
+// ANDs
 if (
   condition1 &&
   condition2 &&
@@ -1178,6 +1180,7 @@ if (
 ```
 
 Make complex conditions simpler by creating variables:
+
 ```javascript
 let complexCondition = (
   condition4
