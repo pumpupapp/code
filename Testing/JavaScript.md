@@ -7,6 +7,7 @@
 
 
 <br />
+
 ## Writing Tests
 
 
@@ -178,6 +179,7 @@ users.length.should.eql(2)
 
 
 <br />
+
 ## Concepts
 
 
@@ -213,11 +215,13 @@ showStub.restore()
 
 
 <br />
-###### [More about stubs](http://sinonjs.org/docs/#stubs)
+
+###### [More about stubs](http://sinonjs.org/releases/v2.1.0/stubs/)
 
 
 
 <br />
+
 ### Spies
 
 Functions that record and report on how they’re being called.
@@ -251,14 +255,24 @@ callbackSpy.restore()
 
 
 <br />
-###### [More about spies](http://sinonjs.org/docs/#spies)
+
+###### [More about spies](http://sinonjs.org/releases/v2.1.0/spies/)
 
 
 
 <br />
+
 ### Mocks
 
-Avoid them for their added complexity. Use [spies](#Spies) and [stubs](#Stubs) instead.
+Use mocks if and only if you are asserting on how a dependency is being used (i.e., expectations).
+
+Do NOT use mocks if [spies](#Spies) or [stubs](#Stubs) suffice.
+
+Do NOT abuse mocks. Using mocks in any complex way usually indicates a problem with the underlying code architecture.
+
+<br />
+
+###### [More about mocks](http://sinonjs.org/releases/v2.1.0/mocks/)
 
 
 
@@ -278,6 +292,7 @@ Fixture mocks are primarily used with [dependency injections](#Dependency inject
 
 
 <br />
+
 ### Dependency injections
 
 Replace dependencies of a module with an alternate that can be manipulated to ease testing.
@@ -331,6 +346,7 @@ showStub.restore()
 ```
 
 <br />
+
 ##### Emulating an environment
 
 ```jsx
@@ -366,11 +382,13 @@ let module = moduleInjector({
 
 
 <br />
+
 ###### [More about dependency injections](https://github.com/plasticine/inject-loader)
 
 
 
 <br />
+
 ### Module wrappers
 
 Quite often, there are scenarios where a Cordova plugin is exported to the global namespace. Not only does this clobber the global namespace, but it also makes it more difficult to test (since those globals are not available in a testing environment).
@@ -423,6 +441,7 @@ let module = moduleInjector({
 ---
 
 <br />
+
 ## Libraries
 
 1. [Mocha](https://mochajs.org/): the test suite
