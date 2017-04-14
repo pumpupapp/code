@@ -52,12 +52,13 @@ This is the general "what?" of the feature. What is your feature? Why is it impo
 
 ## R&D
 
-* Ask every question that you can think of regarding this feature and the challenges involved in implementing it
-* Describe results you obtained through research and development
-  * What frameworks did you try? Why?
-  * What information did you gather? StackOverflow answers, videos, GitHub comments, etc.
-  * What assumptions did you make? How did they change? Why?
-  * What had to be reverted? Why?
+* Problem: Ask every question that you can think of regarding this feature and the challenges involved in implementing it
+  * Describe results you obtained through research and development
+    * What frameworks did you try? Why?
+    * What information did you gather? StackOverflow answers, videos, GitHub comments, etc.
+    * What assumptions did you make? How did they change? Why?
+    * What had to be reverted? Why?
+  * Solution: What was the final solution? Why did you pick it? List any sources.
 
 
 
@@ -103,7 +104,7 @@ This is the general "what?" of the feature. What is your feature? Why is it impo
 
 Provide the appropriate constants/variables/functions/etc. and their locations.
 ```js
-*NOTE:* Be sure to alphabetize your api sections.
+// NOTE: Be sure to alphabetize your api sections.
 
 /**
  * Fully document everything. This code is copy-pasteable for when
@@ -114,8 +115,33 @@ function yoMama() {}
 ```
 
 
-```js
 ### [API Section 2]
 
+
+Here is an example of a changed file:
+```js
 // ...
+
+/**
+ * This is a new function in an existing file. It is optionally wrapped in `// ...`.
+ * @return {Any}
+ */
+function newFunction() {}
+
+// ...
+
+const EXISTING_CONSTANT = {
+
+  // ...
+
+  /**
+   * This is a new property. Notice that it is surrounded by `// ...` to show
+   * that it is modifying existing code.
+   * @type {Object}
+   */
+  myNewProp: {},
+
+  // ...
+
+}
 ```
