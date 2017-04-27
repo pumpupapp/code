@@ -13,9 +13,9 @@ The goal with QA is to ensure that every app update contains no regressions and 
 
 ### Mobile
 
-1. Update the app version to `[VERSION]-[PROJECT_NAME]-[BUILD_NUMBER]`, eg.
+1. Update the app version to `[VERSION]-[PROJECT_NAME].[BUILD_NUMBER]`, eg.
     ```
-    yarn bump -- -v 5.3.0-payment-settings-0
+    yarn bump -- -v 5.3.0-payment-settings.0
     ```
 
 1. Update the QA checklist in Trello
