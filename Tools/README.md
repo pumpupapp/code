@@ -37,6 +37,7 @@ Once you’ve set up Package Control, you may start installing plugins by hittin
 - **SublimeLinter-jshint**: lints JavaScript files
 - **SublimeLinter-jsxhint**: lints JSX files
 - **SublimeLinter-csslint**: lints CSS files
+- [**SublimeLinter-shellcheck**](https://github.com/koalaman/shellcheck): lints Bash scripts
 - **SyncedSideBar**: highlights the active file
 
 To install all of these plugins (and some more), use th *Sublime Packages.zip* file and merge it with `Sublime Text.app -> Show Package Contents -> Contents -> MacOS -> Packages`.
