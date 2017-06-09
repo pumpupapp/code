@@ -16,7 +16,18 @@ This is the general "what?" of the feature. What is your feature? Why is it impo
 
 ## Post-Mortem
 
-[TBD]
+* Mistakes
+  * This should be updated as you implement the feature
+  * Add anything that you missed in your original architecture
+* Challenges
+  * This should be updated as you implement the feature
+  * Add anything that was more challenging than expected, and may have contributed to misjudgement of time
+* Metrics
+  * List the metrics changes that arose after the feature was shipped
+  * Don't forget to compare them with your expectations
+* Learnings
+  * Jot down what you learned in architecting and building this feature
+  * How will you improve in future feature architectures and implementations?
 
 
 
