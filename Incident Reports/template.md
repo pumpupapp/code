@@ -9,7 +9,7 @@ TODO: Auto-generation from template.
 [Date]
 
 
-# Issue Summary
+## Issue Summary
 
 * short summary (5 sentences)
 * list the duration along with start and end times (include timezone)
@@ -18,7 +18,7 @@ TODO: Auto-generation from template.
 
 
 
-# Timeline
+## Timeline
 
 * list the timezone
 * covers the outage duration
@@ -29,20 +29,20 @@ TODO: Auto-generation from template.
 
 
 
-# Root Cause
+## Root Cause
 
 * give a detailed explanation of event
 * do not sugarcoat
 
 
 
-# Resolution and recovery
+## Resolution and recovery
 
 Give detailed explanation of actions taken (includes times)
 
 
 
-# Corrective and Preventative Measures
+## Corrective and Preventative Measures
 
 * itemized list of ways to prevent it from happening again
 * what can we do better next time?
