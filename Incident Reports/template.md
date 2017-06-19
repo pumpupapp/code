@@ -40,6 +40,9 @@ TODO: Auto-generation from template.
 
 Give detailed explanation of actions taken (includes times)
 
+| Response Time | Recovery Time |
+| :---:         | :---:         |
+| XXd XXh XXm   | XXd XXh XXm   |
 
 
 ## Corrective and Preventative Measures
