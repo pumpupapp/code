@@ -17,9 +17,9 @@ Short summary (5 sentences). List the duration along with start and end times (i
 
 ## Timeline ([Timezone])
 
-* June 13 09:53 PM: Cover the outage duration.
+* June 13 09:53 PM: Cover the outage duration
 * June 14 06:02 AM: When outage began
-* June 14 02:08 PM: When staff was notified
+* June 14 02:08 PM: When staff were notified
 * June 14 03:56 PM: Actions, events, …
 * June 14 04:39 PM: When service was restored
 
@@ -34,7 +34,7 @@ Short summary (5 sentences). List the duration along with start and end times (i
 
 ## Resolution and Recovery
 
-Give detailed explanation of actions taken (includes times)
+Give a detailed explanation of actions taken (includes times).
 
 | Response Time | Recovery Time |
 | :---:         | :---:         |
