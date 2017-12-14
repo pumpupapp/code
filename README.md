@@ -37,7 +37,7 @@
 
 At PumpUp, we hold high standards for the quality of code that powers any of our products. Maintaining a healthy codebase is **crucial** for large-scale applications to be able to move fast and iterate often.
 
-So, we are creating this guide – an ever-evolving story of how we operate, from avoiding semicolons to shooting Nerf™ guns.
+So, we are creating this guide – an ever-evolving story of how we operate, from avoiding semicolons to shipping.
 
 <br />
 

@@ -78,7 +78,6 @@ feature/workout.preview → • - - - - ◆ - - •    \         ◦         |
 ### Permissions
 
 In order to merge code into a branch, *you must have permission*.
-Unfortunately, GitHub doesn't have all permissions built-in, but we devise our own and shoot any who merge without permission with Nerf™ guns.
 
 1. **Gatekeeper**
   * Permission to merge into mission-critical branches, including `master`, `develop`, `release`, and `hotfix`

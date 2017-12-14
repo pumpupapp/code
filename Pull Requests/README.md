@@ -54,8 +54,3 @@ The only exceptions are:
 
 * project branch ~> `develop`
 * release branch ~> `master`
-
-
-## Culture
-
-After opening a PR, it is customary to gently shoot the assigned *Reviewer* with a Nerf™ gun. **Please avoid eye and genital contact.**
